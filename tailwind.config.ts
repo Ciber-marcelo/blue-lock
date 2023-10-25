@@ -7,6 +7,11 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    fontFamily: {
+      //sans é o padrão
+      sans: ['var(--font-inter)', 'sans-serif'],
+      roboto: ['Roboto', 'sans-serif']
+    },
     extend: {
       colors: {
         color1: '#0D4B98', 
