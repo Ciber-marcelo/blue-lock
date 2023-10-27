@@ -1,9 +1,21 @@
+'use client'
+
+import CharGraph from "@/components/char-graph";
 import CharList from "@/components/char-list";
+import { useState } from "react";
+
 
 export default function Home() {
+  const [char, setChar] = useState({})
+
+  function handleSaveChar(item: any) {
+    setChar(item)
+  }
+
   return (
     <div >
-      <CharList />
+      <CharList onChar={handleSaveChar} />
+      <CharGraph show={char} />
     </div>
   )
 }

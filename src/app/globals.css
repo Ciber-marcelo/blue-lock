@@ -12,17 +12,29 @@
   @apply mx-auto w-full max-w-[1200px] px-6
 }
 
-*::-webkit-scrollbar {
+/* *::-webkit-scrollbar {
   width: 8px;
-  height: 16px;
 }
 
 *::-webkit-scrollbar-track {
   background: #001B3D;
-  border-radius: 10px;
 }
 
 *::-webkit-scrollbar-thumb {
   background-color: #0D4B98;
-  border-radius: 10px;
+} */
+
+.scrollbar::-webkit-scrollbar {
+  height: 8px;
 }
+
+.scrollbar::-webkit-scrollbar-track {
+  background: #001B3D;
+  border-radius: 5px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #0D4B98;
+  border-radius: 5px;
+}
+
