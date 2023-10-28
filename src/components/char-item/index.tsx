@@ -29,7 +29,7 @@ export default function CharItem({ image, name, onClick }: charItemProps) {
             src={image}
             alt='Character image'
          />
-         <div className="h-10 bg-color2 flex justify-center items-center font-roboto text-sm text-white uppercase">
+         <div className="h-10 bg-color2 flex justify-center items-center font-roboto text-sm text-white font-bold uppercase">
             {name}
          </div>
       </button>
