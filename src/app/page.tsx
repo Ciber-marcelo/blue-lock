@@ -1,6 +1,6 @@
 'use client'
 
-import CharGraph from "@/components/char-graph";
+import CharInfo from "@/components/char-info";
 import CharList from "@/components/char-list";
 import { useState } from "react";
 
@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div >
       <CharList onChar={handleSaveChar} />
-      <CharGraph show={char} />
+      <CharInfo show={char} />
     </div>
   )
 }
