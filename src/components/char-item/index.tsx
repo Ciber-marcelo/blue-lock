@@ -11,10 +11,10 @@ export default function CharItem({ image, name, onClick }: charItemProps) {
       <button 
          onClick={onClick}
          className="
-            min-w-[160px] 
-            max-w-[160px] 
-            min-h-[200px] 
-            max-h-[200px] 
+            min-w-[120px] 
+            max-w-[120px] 
+            min-h-[150px] 
+            max-h-[150px] 
             bg-color1 
             border-2 
             border-color2 
@@ -29,7 +29,7 @@ export default function CharItem({ image, name, onClick }: charItemProps) {
             src={image}
             alt='Character image'
          />
-         <div className="h-10 bg-color2 flex justify-center items-center font-roboto text-sm text-white font-bold uppercase">
+         <div className="h-[30px] bg-color2 flex justify-center items-center font-roboto text-xs text-white font-bold uppercase">
             {name}
          </div>
       </button>

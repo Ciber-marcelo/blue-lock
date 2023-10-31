@@ -22,10 +22,10 @@ export default function CharList({ onChar }: any) {
    }
 
    return (
-      <div className="container pt-16">
+      <div className="container pt-8">
          <div className="overflow-x-auto pb-4 scrollbar">
             <div className="flex gap-4">
-               {chars.slice(0, 8).map((item) => (
+               {chars.slice(0, 10).map((item) => (
                   <CharItem
                      onClick={() => handleChar(item)}
                      key={item.id}
@@ -36,7 +36,7 @@ export default function CharList({ onChar }: any) {
             </div>
 
             <div className="flex gap-4 pt-4">
-               {chars.slice(-7).map((item) => (
+               {chars.slice(-5).map((item) => (
                   <CharItem
                      onClick={() => handleChar(item)}
                      key={item.id}

@@ -5,18 +5,24 @@ import CharGraph from "../char-graph";
 export default function CharInfo({ show }: any) {
 
    return (
-      <div className="container pt-16">
-         <div className="h-[480px] bg-gradient-to-r from-color1 to-color2 rounded-md">
+      <div className="container pt-8">
+         <div className="min-h-[432px] bg-gradient-to-r from-color1 to-color2 rounded-md">
             {show.image ?
-               <div className="flex justify-between items-center px-2">
+               <div className="flex flex-wrap justify-center gap-8 items-center p-4">
                   <Image
-                     width={300}
-                     height={480}
+                     width={250}
+                     height={400}
                      src={show.image}
                      alt=''
                   />
-                  <CharGraph />
-                  {/* <div className="h-[450px] w-[300px] bg-cyan-500"></div> */}
+                  <CharGraph 
+                     speed={show.stats.speed}
+                     defense={show.stats.defense}
+                     pass={show.stats.pass}
+                     dribble={show.stats.dribble}
+                     shoot={show.stats.shoot}
+                     offense={show.stats.offense}
+                  />
                </div>
                :
                <Loading />

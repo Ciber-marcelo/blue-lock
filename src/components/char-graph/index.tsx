@@ -2,7 +2,17 @@ import dynamic from 'next/dynamic'
 import Chart from 'react-apexcharts'
 // const Chart = dynamic(() => import('react-apexcharts'))
 
-export default function CharGraph() {
+type statsProps = {
+   speed: number
+   defense: number
+   pass: number
+   dribble: number
+   shoot: number
+   offense: number
+}
+
+
+export default function CharGraph({ speed, defense, pass, dribble, shoot, offense }: statsProps) {
    const optionsGraph = {
       xaxis: {
          categories: ['SPEED', 'DEFENSE', 'PASS', 'DRIBBLE', 'SHOOT', 'OFFENSE'],
@@ -18,10 +28,10 @@ export default function CharGraph() {
          }
       },
       yaxis: {
-         show: false, 
+         show: false,
          tickAmount: 1,
          min: 0,
-         max: 102,
+         max: 105,
       },
       fill: {
          opacity: 0.8,
@@ -29,7 +39,7 @@ export default function CharGraph() {
       },
       stroke: {
          show: true,
-         width: 2,
+         width: 5,
          colors: ['#fff']
       },
       markers: {
@@ -43,6 +53,9 @@ export default function CharGraph() {
             borderRadius: 2,
             borderColor: '#fff',
             padding: 2,
+         },
+         style: {
+            fontSize: '12px'
          }
       },
       plotOptions: {
@@ -63,17 +76,18 @@ export default function CharGraph() {
 
    const seriesGraph = [{
       name: "series-1",
-      data: [70, 100, 85, 100, 79, 99]
+      data: [speed, defense, pass, dribble, shoot, offense]
    }]
 
    return (
-      <div className="h-[450px] w-[500px] bg-blue-100">
+      <div className=' w-[500px] h-[500px] bg-green-500'>
          <Chart
             className='bg-red-500'
             options={optionsGraph}
             series={seriesGraph}
             type="radar"
-            width="500"
+         // width="375"
+         // height="375"
          />
       </div>
    )

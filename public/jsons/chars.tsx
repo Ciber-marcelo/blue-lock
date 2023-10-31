@@ -14,12 +14,12 @@ export const chars = [
       icon: isagiIcon ,
       name: 'Isagi Yoichi',
       stats: {
-         speed: 1,
-         defense: 2,
-         pass: 2,
-         dribble: 1,
-         shoot: 3,
-         offense: 3
+         speed: 77,
+         defense: 75,
+         pass: 78,
+         dribble: 70,
+         shoot: 82,
+         offense: 94
       } 
    },
    {
@@ -28,12 +28,12 @@ export const chars = [
       icon: bachiraIcon ,
       name: 'Bachira Meguru',
       stats: {
-         speed: 1,
-         defense: 2,
-         pass: 2,
-         dribble: 1,
-         shoot: 3,
-         offense: 3
+         speed: 84,
+         defense: 68,
+         pass: 88,
+         dribble: 95,
+         shoot: 82,
+         offense: 86
       } 
    },
    {
@@ -42,12 +42,12 @@ export const chars = [
       icon: kunigamiIcon ,
       name: 'Kunigami Rensuke',
       stats: {
-         speed: 1,
-         defense: 2,
-         pass: 2,
-         dribble: 1,
-         shoot: 3,
-         offense: 3
+         speed: 85,
+         defense: 75,
+         pass: 65,
+         dribble: 71,
+         shoot: 95,
+         offense: 94
       } 
    },
    {
@@ -56,12 +56,12 @@ export const chars = [
       icon: chigiriIcon ,
       name: 'Chigiri Hyoma',
       stats: {
-         speed: 1,
-         defense: 2,
-         pass: 2,
-         dribble: 1,
-         shoot: 3,
-         offense: 3
+         speed: 98,
+         defense: 68,
+         pass: 80,
+         dribble: 93,
+         shoot: 88,
+         offense: 95
       } 
    },
    {
