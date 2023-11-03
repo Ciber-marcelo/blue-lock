@@ -29,7 +29,7 @@ export const chars = [
       icon: bachiraIcon ,
       name: 'Bachira Meguru',
       stats: {
-         total: 88,
+         total: 86,
          speed: 84,
          defense: 68,
          pass: 88,

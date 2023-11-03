@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { formatScoreNumber } from "@/services/formatScoreNumber";
 
 type statsProps = {
    image: any
@@ -9,38 +10,13 @@ type statsProps = {
    dribble: number
    shoot: number
    offense: number
-
-   totalScore?: string
-   speedScore?: string
-   defenseScore?: string
-   passScore?: string
-   dribbleScore?: string
-   shootScore?: string
-   offenseScore?: string
 }
 
-// export default function CharStats({image, speed, defense, pass, dribble, shoot, offense }: statsProps) {
-export default function CharStats({ 
-   image, 
-   total, 
-   speed, 
-   defense, 
-   pass, 
-   dribble, 
-   shoot, 
-   offense,
-   totalScore,
-   speedScore, 
-   defenseScore, 
-   passScore, 
-   dribbleScore, 
-   shootScore, 
-   offenseScore, 
-}: statsProps) {
+export default function CharStats({ image, total, speed, defense, pass, dribble, shoot, offense }: statsProps) {
 
    return (
-      <div className='flex'>
-         <div className="flex items-center bg-color1 px-2 border-8 border-r-0 border-color2 rounded-l-md">
+      <div className='flex w-full'>
+         <div className="flex w-full justify-center items-center bg-color1 px-1 border-8 border-r-0 border-color2 rounded-l-md">
             <Image
                width={250}
                height={400}
@@ -59,15 +35,18 @@ export default function CharStats({
                   </span>
                </div>
                <div className="
+                  flex
+                  justify-center
+                  items-center
+                  w-[70px]
                   bg-white
-                  p-2
                   font-roboto  
                   text-color2
                   text-7xl 
                   font-bold
                   rounded-md
                ">
-                  {totalScore}
+                  {formatScoreNumber(total)}
                </div>
             </div>
 
@@ -79,7 +58,7 @@ export default function CharStats({
                   {speed}
                </div>
                <div className="flex w-[70px] justify-center items-center bg-white rounded-r-md font-roboto text-2xl text-color2 font-bold">
-                  {speedScore}
+                  {formatScoreNumber(speed)}
                </div>
             </div>
 
@@ -91,7 +70,7 @@ export default function CharStats({
                   {defense}
                </div>
                <div className="flex w-[70px] justify-center items-center bg-white rounded-r-md font-roboto text-2xl text-color2 font-bold">
-                  {defenseScore}
+                  {formatScoreNumber(defense)}
                </div>
             </div>
 
@@ -103,7 +82,7 @@ export default function CharStats({
                   {pass}
                </div>
                <div className="flex w-[70px] justify-center items-center bg-white rounded-r-md font-roboto text-2xl text-color2 font-bold">
-                  {passScore}
+                  {formatScoreNumber(pass)}
                </div>
             </div>
 
@@ -115,7 +94,7 @@ export default function CharStats({
                   {dribble}
                </div>
                <div className="flex w-[70px] justify-center items-center bg-white rounded-r-md font-roboto text-2xl text-color2 font-bold">
-                  {dribbleScore}
+                  {formatScoreNumber(dribble)}
                </div>
             </div>
 
@@ -127,7 +106,7 @@ export default function CharStats({
                   {shoot}
                </div>
                <div className="flex w-[70px] justify-center items-center bg-white rounded-r-md font-roboto text-2xl text-color2 font-bold">
-                  {shootScore}
+                  {formatScoreNumber(shoot)}
                </div>
             </div>
 
@@ -139,11 +118,11 @@ export default function CharStats({
                   {offense}
                </div>
                <div className="flex w-[70px] justify-center items-center bg-white rounded-r-md font-roboto text-2xl text-color2 font-bold">
-                  {offenseScore}
+                  {formatScoreNumber(offense)}
                </div>
             </div>
 
-            <span className="w-full font-roboto text-gray-500 text-[10px] leading-none">
+            <span className="w-full font-roboto text-gray-400 text-[10px] leading-none">
                The total rating is not based on average, but rather as a Blue Lock player.
             </span>
          </div>

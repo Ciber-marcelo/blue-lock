@@ -3,6 +3,7 @@ import Chart from 'react-apexcharts'
 // const Chart = dynamic(() => import('react-apexcharts'))
 
 type statsProps = {
+   name: string
    speed: number
    defense: number
    pass: number
@@ -11,8 +12,7 @@ type statsProps = {
    offense: number
 }
 
-
-export default function CharGraph({ speed, defense, pass, dribble, shoot, offense }: statsProps) {
+export default function CharGraph({ name, speed, defense, pass, dribble, shoot, offense }: statsProps) {
    const optionsGraph = {
       xaxis: {
          categories: ['SPEED', 'DEFENSE', 'PASS', 'DRIBBLE', 'SHOOT', 'OFFENSE'],
@@ -39,13 +39,13 @@ export default function CharGraph({ speed, defense, pass, dribble, shoot, offens
       },
       stroke: {
          show: true,
-         width: 5,
+         width: 3,
          colors: ['#fff']
       },
       markers: {
          size: 0
       },
-      colors: ['#001B3D'],
+      colors: ['#0D4B98'],
       dataLabels: {
          enabled: true,
          background: {
@@ -62,7 +62,7 @@ export default function CharGraph({ speed, defense, pass, dribble, shoot, offens
          radar: {
             polygons: {
                fill: {
-                  colors: ['#0D4B98']
+                  colors: ['#001B3D']
                }
             }
          }
@@ -80,15 +80,19 @@ export default function CharGraph({ speed, defense, pass, dribble, shoot, offens
    }]
 
    return (
-      <div className=' w-[500px] h-[500px] bg-green-500'>
+      <div className='flex flex-col w-full min-h-[430px] items-center bg-color1 border-8 border-color2 rounded-md'>
+         <div className='flex justify-center w-full pb-1 bg-color2 font-roboto text-white font-bold uppercase'>
+            {name} Graph
+         </div>
          <Chart
-            className='bg-red-500'
+            className='w-full pl-4 pt-6'
             options={optionsGraph}
             series={seriesGraph}
             type="radar"
-         // width="375"
-         // height="375"
          />
+         <div className='flex w-full p-1 font-roboto text-gray-400 text-[10px]'>
+            The informations was taken from the Blue Lock manga (up to ch.233).
+         </div>
       </div>
    )
 }
