@@ -14,6 +14,7 @@ export const chars = [
       icon: isagiIcon ,
       name: 'Isagi Yoichi',
       stats: {
+         total: 88,
          speed: 77,
          defense: 75,
          pass: 78,
@@ -28,6 +29,7 @@ export const chars = [
       icon: bachiraIcon ,
       name: 'Bachira Meguru',
       stats: {
+         total: 88,
          speed: 84,
          defense: 68,
          pass: 88,
@@ -42,6 +44,7 @@ export const chars = [
       icon: kunigamiIcon ,
       name: 'Kunigami Rensuke',
       stats: {
+         total: 91,
          speed: 85,
          defense: 75,
          pass: 65,
@@ -56,6 +59,7 @@ export const chars = [
       icon: chigiriIcon ,
       name: 'Chigiri Hyoma',
       stats: {
+         total: 90,
          speed: 98,
          defense: 68,
          pass: 80,
@@ -70,6 +74,7 @@ export const chars = [
       icon: isagiIcon ,
       name: 'Isagi Yoichi',
       stats: {
+         total: 88,
          speed: 1,
          defense: 2,
          pass: 2,
@@ -84,6 +89,7 @@ export const chars = [
       icon: isagiIcon ,
       name: 'Isagi Yoichi',
       stats: {
+         total: 88,
          speed: 1,
          defense: 2,
          pass: 2,
@@ -98,6 +104,7 @@ export const chars = [
       icon: isagiIcon ,
       name: 'Isagi Yoichi',
       stats: {
+         total: 88,
          speed: 1,
          defense: 2,
          pass: 2,
@@ -112,6 +119,7 @@ export const chars = [
       icon: isagiIcon ,
       name: 'Isagi Yoichi',
       stats: {
+         total: 88,
          speed: 1,
          defense: 2,
          pass: 2,
@@ -126,6 +134,7 @@ export const chars = [
       icon: isagiIcon ,
       name: 'Isagi Yoichi',
       stats: {
+         total: 88,
          speed: 1,
          defense: 2,
          pass: 2,
@@ -140,6 +149,7 @@ export const chars = [
       icon: isagiIcon ,
       name: 'Isagi Yoichi',
       stats: {
+         total: 88,
          speed: 1,
          defense: 2,
          pass: 2,
@@ -154,6 +164,7 @@ export const chars = [
       icon: isagiIcon ,
       name: 'Isagi Yoichi',
       stats: {
+         total: 88,
          speed: 1,
          defense: 2,
          pass: 2,
@@ -168,6 +179,7 @@ export const chars = [
       icon: isagiIcon ,
       name: 'Isagi Yoichi',
       stats: {
+         total: 88,
          speed: 1,
          defense: 2,
          pass: 2,
@@ -182,6 +194,7 @@ export const chars = [
       icon: isagiIcon ,
       name: 'Isagi Yoichi',
       stats: {
+         total: 88,
          speed: 1,
          defense: 2,
          pass: 2,
@@ -196,6 +209,7 @@ export const chars = [
       icon: isagiIcon ,
       name: 'Isagi Yoichi',
       stats: {
+         total: 88,
          speed: 1,
          defense: 2,
          pass: 2,
@@ -210,6 +224,7 @@ export const chars = [
       icon: isagiIcon ,
       name: 'Isagi Yoichi',
       stats: {
+         total: 88,
          speed: 1,
          defense: 2,
          pass: 2,

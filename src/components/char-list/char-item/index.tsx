@@ -16,7 +16,7 @@ export default function CharItem({ image, name, onClick }: charItemProps) {
             min-h-[150px] 
             max-h-[150px] 
             bg-color1 
-            border-2 
+             border-2 
             border-color2 
             rounded-md
             hover:bg-blue-700

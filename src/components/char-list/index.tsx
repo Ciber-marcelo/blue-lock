@@ -1,5 +1,5 @@
 import { chars } from "../../../public/jsons/chars";
-import CharItem from "../char-item";
+import CharItem from "./char-item";
 import { useEffect } from "react";
 
 type charObject = {
