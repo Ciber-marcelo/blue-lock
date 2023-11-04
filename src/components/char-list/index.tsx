@@ -1,33 +1,24 @@
-import { chars } from "../../../public/jsons/chars";
+import { CharContext } from "@/contexts/char-context";
+import { characterList } from "../../../public/jsons/characterList";
 import CharItem from "./char-item";
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 
-type charObject = {
-   id: number
-   image: any
-   name: string
-}
-
-//"onChar" serve para passar o "item" para outro componente, da uma olhada em "app/page.tsx"
-export default function CharList({ onChar }: any) {
+export default function CharList() {
+   const {selectedChar } = useContext(CharContext);
 
    useEffect(() => {
-      chars.slice(0, 1).map((item) => (
-         handleChar(item)
+      characterList.slice(0, 1).map((item) => (
+         selectedChar(item)
       ))
    }, [])
-
-   function handleChar(item: charObject) {
-      onChar(item)
-   }
 
    return (
       <div className="container pt-8">
          <div className="overflow-x-auto pb-4 scrollbar">
             <div className="flex gap-4">
-               {chars.slice(0, 10).map((item) => (
+               {characterList.slice(0, 10).map((item) => (
                   <CharItem
-                     onClick={() => handleChar(item)}
+                     onClick={() => selectedChar(item)}
                      key={item.id}
                      image={item.icon}
                      name={item.name}
@@ -36,9 +27,9 @@ export default function CharList({ onChar }: any) {
             </div>
 
             <div className="flex gap-4 pt-4">
-               {chars.slice(-5).map((item) => (
+               {characterList.slice(10).map((item) => (
                   <CharItem
-                     onClick={() => handleChar(item)}
+                     onClick={() => selectedChar(item)}
                      key={item.id}
                      image={item.icon}
                      name={item.name}

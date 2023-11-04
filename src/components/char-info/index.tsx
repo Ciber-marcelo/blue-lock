@@ -1,31 +1,34 @@
+import { useContext } from "react";
+import { CharContext } from "@/contexts/char-context";
 import { Loading } from "../loading";
 import CharGraph from "./char-graph";
 import CharStats from "./char-stats";
 
-export default function CharInfo({ show }: any) {
+export default function CharInfo() {
+   const { char } = useContext(CharContext);
+
    return (
       <div className="container mt-8">
-         {/* <div className="min-h-[432px] bg-gradient-to-r from-color1 to-color2 rounded-md"> */}
-         {show.image ?
+         {char?.image ?
             <div className="flex flex-col gap-4 lg:flex-row">
                <CharStats
-                  image={show.image}
-                  total={show.stats.total}
-                  speed={show.stats.speed}
-                  defense={show.stats.defense}
-                  pass={show.stats.pass}
-                  dribble={show.stats.dribble}
-                  shoot={show.stats.shoot}
-                  offense={show.stats.offense}
+                  image={char.image}
+                  total={char.stats.total}
+                  speed={char.stats.speed}
+                  defense={char.stats.defense}
+                  pass={char.stats.pass}
+                  dribble={char.stats.dribble}
+                  shoot={char.stats.shoot}
+                  offense={char.stats.offense}
                />
                <CharGraph
-                  name={show.name}
-                  speed={show.stats.speed}
-                  defense={show.stats.defense}
-                  pass={show.stats.pass}
-                  dribble={show.stats.dribble}
-                  shoot={show.stats.shoot}
-                  offense={show.stats.offense}
+                  name={char.name}
+                  speed={char.stats.speed}
+                  defense={char.stats.defense}
+                  pass={char.stats.pass}
+                  dribble={char.stats.dribble}
+                  shoot={char.stats.shoot}
+                  offense={char.stats.offense}
                />
             </div>
             :
@@ -33,7 +36,6 @@ export default function CharInfo({ show }: any) {
                <Loading />
             </div>
          }
-         {/* </div> */}
       </div>
    )
 }
