@@ -1,4 +1,4 @@
-import dynamic from 'next/dynamic'
+// import dynamic from 'next/dynamic'
 import Chart from 'react-apexcharts'
 // const Chart = dynamic(() => import('react-apexcharts'))
 
@@ -80,7 +80,7 @@ export default function CharGraph({ name, speed, defense, pass, dribble, shoot, 
    }]
 
    return (
-      <div className='flex flex-col w-full min-h-[430px] items-center bg-color1 border-8 border-color2 rounded-md'>
+      <div className='flex flex-col w-full h-auto sm:min-h-[430px] justify-between items-center bg-color1 border-8 border-color2 rounded-md'>
          <div className='flex justify-center w-full pb-1 bg-color2 font-roboto text-white font-bold uppercase'>
             {name} Graph
          </div>
@@ -90,7 +90,7 @@ export default function CharGraph({ name, speed, defense, pass, dribble, shoot, 
             series={seriesGraph}
             type="radar"
          />
-         <div className='flex w-full p-1 font-roboto text-gray-400 text-[10px]'>
+         <div className='flex w-full pl-1 font-roboto text-gray-400 text-[10px]'>
             The informations was taken from the Blue Lock manga (up to ch.233).
          </div>
       </div>

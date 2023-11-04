@@ -1,13 +1,13 @@
 import isagi from '../images/chars/isagi.png'
-import bachira from '../images/chars/bachira.png'
-import kunigami from '../images/chars/kunigami.png'
-import chigiri from '../images/chars/chigiri.png'
 import isagiIcon  from '../images/chars-icons/isagi.svg'
+import bachira from '../images/chars/bachira.png'
 import bachiraIcon  from '../images/chars-icons/bachira.svg'
+import kunigami from '../images/chars/kunigami.png'
 import kunigamiIcon  from '../images/chars-icons/kunigami.svg'
+import chigiri from '../images/chars/chigiri.png'
 import chigiriIcon  from '../images/chars-icons/chigiri.svg'
 
-export const chars = [
+export const characterList = [
    {
       id: 1,
       image: isagi,
