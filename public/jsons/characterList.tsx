@@ -22,6 +22,8 @@ import iemon from '../images/chars/iemon.svg'
 import iemonIcon  from '../images/chars-icons/iemon.svg'
 import kira from '../images/chars/kira.svg'
 import kiraIcon  from '../images/chars-icons/kira.svg'
+import kaiser from '../images/chars/kaiser.svg'
+import kaiserIcon  from '../images/chars-icons/kaiser.svg'
 
 export const characterList = [
    {
@@ -90,13 +92,13 @@ export const characterList = [
       icon: gagamaruIcon ,
       name: 'Gagamaru Gin',
       stats: {
-         total: 88,
-         speed: 1,
-         defense: 2,
-         pass: 2,
-         dribble: 1,
-         shoot: 3,
-         offense: 3
+         total: 87,
+         speed: 87,
+         defense: 93,
+         pass: 88,
+         dribble: 79,
+         shoot: 80,
+         offense: 84
       } 
    },
    {
@@ -105,13 +107,13 @@ export const characterList = [
       icon: raichiIcon ,
       name: 'Raichi Jingo',
       stats: {
-         total: 88,
-         speed: 1,
-         defense: 2,
-         pass: 2,
-         dribble: 1,
-         shoot: 3,
-         offense: 3
+         total: 81,
+         speed: 77,
+         defense: 90,
+         pass: 81,
+         dribble: 79,
+         shoot: 82,
+         offense: 82
       } 
    },
    {
@@ -120,13 +122,13 @@ export const characterList = [
       icon: igarashiIcon ,
       name: 'Igarashi Gurimu',
       stats: {
-         total: 88,
-         speed: 1,
-         defense: 2,
-         pass: 2,
-         dribble: 1,
-         shoot: 3,
-         offense: 3
+         total: 29,
+         speed: 29,
+         defense: 29,
+         pass: 29,
+         dribble: 29,
+         shoot: 29,
+         offense: 29
       } 
    },
    {
@@ -135,13 +137,13 @@ export const characterList = [
       icon: kuonIcon ,
       name: 'Kuon Wataru',
       stats: {
-         total: 88,
-         speed: 1,
-         defense: 2,
-         pass: 2,
-         dribble: 1,
-         shoot: 3,
-         offense: 3
+         total: 30,
+         speed: 30,
+         defense: 30,
+         pass: 30,
+         dribble: 30,
+         shoot: 30,
+         offense: 30
       } 
    },
    {
@@ -150,13 +152,13 @@ export const characterList = [
       icon: naruhayaIcon ,
       name: 'Naruhaya Asahi',
       stats: {
-         total: 88,
-         speed: 1,
-         defense: 2,
-         pass: 2,
-         dribble: 1,
-         shoot: 3,
-         offense: 3
+         total: 30,
+         speed: 30,
+         defense: 30,
+         pass: 30,
+         dribble: 30,
+         shoot: 30,
+         offense: 30
       } 
    },
    {
@@ -165,13 +167,13 @@ export const characterList = [
       icon: imamuraIcon ,
       name: 'Imamura Yudai',
       stats: {
-         total: 88,
-         speed: 1,
-         defense: 2,
-         pass: 2,
-         dribble: 1,
-         shoot: 3,
-         offense: 3
+         total: 30,
+         speed: 30,
+         defense: 30,
+         pass: 30,
+         dribble: 30,
+         shoot: 30,
+         offense: 30
       } 
    },
    {
@@ -180,13 +182,13 @@ export const characterList = [
       icon: iemonIcon ,
       name: 'Iemon Okuhita',
       stats: {
-         total: 88,
-         speed: 1,
-         defense: 2,
-         pass: 2,
-         dribble: 1,
-         shoot: 3,
-         offense: 3
+         total: 30,
+         speed: 30,
+         defense: 30,
+         pass: 30,
+         dribble: 30,
+         shoot: 30,
+         offense: 30
       } 
    },
    {
@@ -195,13 +197,28 @@ export const characterList = [
       icon: kiraIcon ,
       name: 'Kira Ryosuke',
       stats: {
-         total: 88,
-         speed: 1,
-         defense: 2,
-         pass: 2,
-         dribble: 1,
-         shoot: 3,
-         offense: 3
+         total: 70,
+         speed: 70,
+         defense: 70,
+         pass: 70,
+         dribble: 70,
+         shoot: 70,
+         offense: 70
+      } 
+   },
+   {
+      id: 13,
+      image: kaiser,
+      icon: kaiserIcon ,
+      name: 'Michael Kaiser',
+      stats: {
+         total: 98,
+         speed: 91,
+         defense: 74,
+         pass: 81,
+         dribble: 86,
+         shoot: 98,
+         offense: 96
       } 
    },
 ];

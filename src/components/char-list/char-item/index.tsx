@@ -19,11 +19,13 @@ export default function CharItem({ image, name, onClick }: charItemProps) {
              border-2 
             border-color2 
             rounded-md
-            hover:bg-blue-700
-             transition
+            hover:bg-color2
+            group
+            transition
          "
       >
          <Image
+            className=" rounded-t-[4px]"
             width={160}
             height={160}
             src={image}

@@ -16,7 +16,7 @@ export default function CharList() {
       <div className="container pt-8">
          <div className="overflow-x-auto pb-4 scrollbar">
             <div className="flex gap-4">
-               {characterList.slice(0, 10).map((item) => (
+               {characterList.slice(0, 11).map((item) => (
                   <CharItem
                      onClick={() => selectedChar(item)}
                      key={item.id}
@@ -27,7 +27,7 @@ export default function CharList() {
             </div>
 
             <div className="flex gap-4 pt-4">
-               {characterList.slice(10).map((item) => (
+               {characterList.slice(11).map((item) => (
                   <CharItem
                      onClick={() => selectedChar(item)}
                      key={item.id}
