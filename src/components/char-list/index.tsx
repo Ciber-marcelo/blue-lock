@@ -19,28 +19,6 @@ export default function CharList() {
                   />
                ))}
             </div>
-
-            {/* <div className="flex gap-4">
-               {characterList.slice(0, 11).map((item) => (
-                  <CharItem
-                     onClick={() => selectedChar(item)}
-                     key={item.id}
-                     image={item.icon}
-                     name={item.name}
-                  />
-               ))}
-            </div>
-
-            <div className="flex gap-4 pt-4">
-               {characterList.slice(11).map((item) => (
-                  <CharItem
-                     onClick={() => selectedChar(item)}
-                     key={item.id}
-                     image={item.icon}
-                     name={item.name}
-                  />
-               ))}
-            </div> */}
          </div>
       </div>
    )
