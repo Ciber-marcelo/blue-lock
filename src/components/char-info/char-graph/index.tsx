@@ -1,6 +1,6 @@
-// import dynamic from 'next/dynamic'
-import Chart from 'react-apexcharts'
-// const Chart = dynamic(() => import('react-apexcharts'))
+// estou usando o "dynamic" para importar e resolver um problema da biblioteca "react-apexcharts"
+import dynamic from 'next/dynamic'
+const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 type statsProps = {
    name: string
@@ -89,6 +89,8 @@ export default function CharGraph({ name, speed, defense, pass, dribble, shoot, 
             options={optionsGraph}
             series={seriesGraph}
             type="radar"
+            width={'100%'}
+            height={'auto'}
          />
          <div className='flex w-full pl-1 font-roboto text-gray-400 text-[10px]'>
             The informations was taken from the Blue Lock manga (up to ch.233).

@@ -1,21 +1,26 @@
 import { CharContext } from "@/contexts/char-context";
 import { characterList } from "../../../public/jsons/characterList";
 import CharItem from "./char-item";
-import { useEffect, useContext } from "react";
+import { useContext } from "react";
 
 export default function CharList() {
-   const {selectedChar } = useContext(CharContext);
-
-   useEffect(() => {
-      characterList.slice(0, 1).map((item) => (
-         selectedChar(item)
-      ))
-   }, [])
+   const { selectedChar } = useContext(CharContext);
 
    return (
-      <div className="container pt-8">
+      <div className="container pt-16">
          <div className="overflow-x-auto pb-4 scrollbar">
             <div className="flex gap-4">
+               {characterList.map((item) => (
+                  <CharItem
+                     onClick={() => selectedChar(item)}
+                     key={item.id}
+                     image={item.icon}
+                     name={item.name}
+                  />
+               ))}
+            </div>
+
+            {/* <div className="flex gap-4">
                {characterList.slice(0, 11).map((item) => (
                   <CharItem
                      onClick={() => selectedChar(item)}
@@ -35,7 +40,7 @@ export default function CharList() {
                      name={item.name}
                   />
                ))}
-            </div>
+            </div> */}
          </div>
       </div>
    )

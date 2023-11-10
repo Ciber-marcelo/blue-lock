@@ -9,7 +9,7 @@ export default function CharInfo() {
 
    return (
       <div className="container mt-8">
-         {char?.image ?
+         {char.image ?
             <div className="flex flex-col gap-4 lg:flex-row">
                <CharStats
                   image={char.image}
