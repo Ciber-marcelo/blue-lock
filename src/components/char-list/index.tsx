@@ -1,22 +1,29 @@
 import { CharContext } from "@/contexts/char-context";
 import { characterList } from "../../../public/jsons/characterList";
-import CharItem from "./Char-item";
-import { useContext } from "react";
+import CharItem from "./char-item";
+import { useContext, useState } from "react";
+import SearchCharItem from "./search-char-item";
 
 export default function CharList() {
+   const [search, setSearch] = useState('')
    const { selectedChar } = useContext(CharContext);
 
    return (
       <div className="container pt-16">
-         <div className="overflow-x-auto pb-4 scrollbar">
+         <SearchCharItem onChange={(e: any) => setSearch(e.target.value.toUpperCase())}/>
+
+         <div className="overflow-x-auto py-4 scrollbar">
             <div className="flex gap-4">
                {characterList.map((item) => (
+                  item.name.toUpperCase().includes(search.toUpperCase()) ?
                   <CharItem
                      onClick={() => selectedChar(item)}
                      key={item.id}
                      image={item.icon}
                      name={item.name}
                   />
+                  :
+                  null
                ))}
             </div>
          </div>

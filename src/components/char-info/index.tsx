@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { CharContext } from "@/contexts/char-context";
-import { Loading } from "../Loading";
-import CharGraph from "./Char-graph";
-import CharStats from "./Char-stats";
+import { Loading } from "../loading";
+import CharGraph from "./char-graph";
+import CharStats from "./char-stats";
 
 export default function CharInfo() {
    const { char } = useContext(CharContext);
