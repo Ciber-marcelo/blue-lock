@@ -122,13 +122,13 @@ export const characterList = [
       icon: igarashiIcon ,
       name: 'Igarashi Gurimu',
       stats: {
-         total: 29,
-         speed: 29,
-         defense: 29,
-         pass: 29,
-         dribble: 29,
-         shoot: 29,
-         offense: 29
+         total: 78,
+         speed: 74,
+         defense: 72,
+         pass: 74,
+         dribble: 65,
+         shoot: 72,
+         offense: 78
       } 
    },
    {
@@ -137,13 +137,13 @@ export const characterList = [
       icon: kuonIcon ,
       name: 'Kuon Wataru',
       stats: {
-         total: 30,
-         speed: 30,
-         defense: 30,
-         pass: 30,
-         dribble: 30,
-         shoot: 30,
-         offense: 30
+         total: 74,
+         speed: 72,
+         defense: 74,
+         pass: 71,
+         dribble: 64,
+         shoot: 76,
+         offense: 75
       } 
    },
    {
@@ -152,13 +152,13 @@ export const characterList = [
       icon: naruhayaIcon ,
       name: 'Naruhaya Asahi',
       stats: {
-         total: 30,
-         speed: 30,
-         defense: 30,
-         pass: 30,
-         dribble: 30,
-         shoot: 30,
-         offense: 30
+         total: 71,
+         speed: 75,
+         defense: 68,
+         pass: 75,
+         dribble: 61,
+         shoot: 65,
+         offense: 72
       } 
    },
    {
@@ -167,13 +167,13 @@ export const characterList = [
       icon: imamuraIcon ,
       name: 'Imamura Yudai',
       stats: {
-         total: 30,
-         speed: 30,
-         defense: 30,
-         pass: 30,
-         dribble: 30,
-         shoot: 30,
-         offense: 30
+         total: 69,
+         speed: 67,
+         defense: 63,
+         pass: 71,
+         dribble: 62,
+         shoot: 70,
+         offense: 70
       } 
    },
    {
@@ -182,13 +182,13 @@ export const characterList = [
       icon: iemonIcon ,
       name: 'Iemon Okuhita',
       stats: {
-         total: 30,
-         speed: 30,
-         defense: 30,
-         pass: 30,
-         dribble: 30,
-         shoot: 30,
-         offense: 30
+         total: 70,
+         speed: 71,
+         defense: 78,
+         pass: 72,
+         dribble: 65,
+         shoot: 69,
+         offense: 69
       } 
    },
    {
@@ -197,13 +197,13 @@ export const characterList = [
       icon: kiraIcon ,
       name: 'Kira Ryosuke',
       stats: {
-         total: 70,
-         speed: 70,
+         total: 83,
+         speed: 72,
          defense: 70,
-         pass: 70,
-         dribble: 70,
-         shoot: 70,
-         offense: 70
+         pass: 73,
+         dribble: 65,
+         shoot: 77,
+         offense: 84
       } 
    },
    {
