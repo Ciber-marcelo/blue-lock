@@ -1,6 +1,6 @@
 import { CharContext } from "@/contexts/char-context";
 import { characterList } from "../../../public/jsons/characterList";
-import CharItem from "./char-item";
+import CharItem from "./Char-item";
 import { useContext } from "react";
 
 export default function CharList() {
