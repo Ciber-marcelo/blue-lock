@@ -11,7 +11,7 @@
 
 ## Sobre
 
-**Blue Lock** é uma aplicação web feita para rankear e listar os principais estatos dos personagens do manga Blue Block.  
+**Blue Lock** é uma aplicação web feita para rankear e listar os principais estatos dos personagens do manga Blue Block utilizando a biblioteca React-apex-charts, criei as paginas do projeto no figma como referencia: [figma](https://www.figma.com/file/pgYYY3OQTEIVpnqtUGHW8D/Blue-Lock-site?type=design&node-id=0%3A1&mode=design&t=S1iikWoTtLShvTz3-1)  
 
 ---
 
