@@ -5,7 +5,7 @@
 - [Sobre](#sobre)
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
 - [Funcionalidades](#Funcionalidades)
-- [Acessar projeto](#Acessar-pokedex)
+- [Acessar projeto](#Acessar-projeto)
 
 ---
 
