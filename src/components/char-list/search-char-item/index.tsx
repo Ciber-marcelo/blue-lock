@@ -1,26 +1,30 @@
+import { FaSearch } from 'react-icons/fa'
+
 type SearchProps = {
    onChange: any
 }
 
-export default function SearchCharItem({onChange}: SearchProps) {
+export default function SearchCharItem({ onChange }: SearchProps) {
    return (
-      <input
-         onChange={onChange}
-         className="
-            h-[36px] 
+      <div className='flex items-center px-4 bg-color1  max-w-[400px] rounded-md'>
+         <FaSearch size={20} color='white'/>
+         <input
+            onChange={onChange}
+            maxLength={25}
+            className="
+            h-[50px] 
             w-full
-            max-w-[300px]
-            px-2 
-            bg-color1 
-            rounded-md
-            focus:outline-none
+            p-4 
+            bg-color1
             text-white
-            placeholder:text-gray-400
+            placeholder:text-white
+             placeholder:font-normal
+            focus:outline-none
             font-roboto 
             font-bold
-            text-xs
          "
-         placeholder="Search"
-      />
+            placeholder="Search"
+         />
+      </div>
    )
 }

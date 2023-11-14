@@ -197,13 +197,13 @@ export const characterList = [
       icon: kiraIcon ,
       name: 'Kira Ryosuke',
       stats: {
-         total: 83,
+         total: 79,
          speed: 72,
-         defense: 70,
+         defense: 68,
          pass: 73,
-         dribble: 65,
-         shoot: 77,
-         offense: 84
+         dribble: 71,
+         shoot: 78,
+         offense: 78
       } 
    },
    {
