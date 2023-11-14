@@ -12,7 +12,7 @@ export default function CharList() {
       <div className="container pt-16">
          <SearchCharItem onChange={(e: any) => setSearch(e.target.value.toUpperCase())}/>
 
-         <div className="overflow-x-auto py-4 scrollbar">
+         <div className="overflow-x-auto pt-8 pb-2 scrollbar">
             <div className="flex gap-4">
                {characterList.map((item) => (
                   item.name.toUpperCase().includes(search.toUpperCase()) ?
