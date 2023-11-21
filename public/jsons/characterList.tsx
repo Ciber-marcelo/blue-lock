@@ -137,13 +137,13 @@ export const characterList = [
       icon: kuonIcon ,
       name: 'Kuon Wataru',
       stats: {
-         total: 74,
-         speed: 72,
-         defense: 74,
-         pass: 71,
+         total: 72,
+         speed: 69,
+         defense: 70,
+         pass: 68,
          dribble: 64,
-         shoot: 76,
-         offense: 75
+         shoot: 69,
+         offense: 74
       } 
    },
    {
@@ -152,13 +152,13 @@ export const characterList = [
       icon: naruhayaIcon ,
       name: 'Naruhaya Asahi',
       stats: {
-         total: 71,
-         speed: 75,
-         defense: 68,
-         pass: 75,
-         dribble: 61,
-         shoot: 65,
-         offense: 72
+         total: 69,
+         speed: 70,
+         defense: 67,
+         pass: 69,
+         dribble: 69,
+         shoot: 61,
+         offense: 70
       } 
    },
    {
@@ -167,13 +167,13 @@ export const characterList = [
       icon: imamuraIcon ,
       name: 'Imamura Yudai',
       stats: {
-         total: 69,
+         total: 67,
          speed: 67,
          defense: 63,
          pass: 71,
-         dribble: 62,
-         shoot: 70,
-         offense: 70
+         dribble: 68,
+         shoot: 66,
+         offense: 67
       } 
    },
    {
@@ -182,10 +182,10 @@ export const characterList = [
       icon: iemonIcon ,
       name: 'Iemon Okuhita',
       stats: {
-         total: 70,
-         speed: 71,
-         defense: 78,
-         pass: 72,
+         total: 68,
+         speed: 66,
+         defense: 75,
+         pass: 69,
          dribble: 65,
          shoot: 69,
          offense: 69
@@ -197,13 +197,13 @@ export const characterList = [
       icon: kiraIcon ,
       name: 'Kira Ryosuke',
       stats: {
-         total: 79,
+         total: 75,
          speed: 72,
          defense: 68,
          pass: 73,
-         dribble: 71,
-         shoot: 78,
-         offense: 78
+         dribble: 68,
+         shoot: 72,
+         offense: 74
       } 
    },
    {
