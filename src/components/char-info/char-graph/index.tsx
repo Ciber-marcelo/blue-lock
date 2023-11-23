@@ -1,9 +1,10 @@
 // estou usando o "dynamic" para importar e resolver um problema da biblioteca "react-apexcharts"
 import { Loading } from '@/components/loading';
 import dynamic from 'next/dynamic'
-const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 import { useContext } from "react";
 import { CharContext } from "@/contexts/char-context";
+
+const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 type statsProps = {
    name: string
