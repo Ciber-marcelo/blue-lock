@@ -10,7 +10,7 @@ export default function Footer() {
         src="/images/M.svg"
         alt="Logo marcelones"
       />
-      Desenvolvido por Marcelones
+      Developed by Marcelones
     </div>
   )
 }

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function CreateFormation() {
    return (
       <div className="flex justify-center items-center h-[700px]">
-         Em construção
+         Under construction
       </div>
    )
 }
