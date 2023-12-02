@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@dnd-kit/core": "^6.1.0",
     "apexcharts": "^3.44.0",
     "next": "^14.0.2",
     "react": "^18",
