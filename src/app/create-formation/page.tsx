@@ -1,3 +1,4 @@
+import FormationMenu from "@/components/formation-menu";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,8 +8,9 @@ export const metadata: Metadata = {
 
 export default function CreateFormation() {
    return (
-      <div className="flex justify-center items-center h-[700px]">
-         Under construction
+      <div className="flex items-center flex-col gap-10 mt-10">
+         Under construction / Em construção 
+         <FormationMenu />
       </div>
    )
 }
