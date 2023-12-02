@@ -1,8 +1,8 @@
 import { CharContext } from "@/contexts/char-context";
 import { characterList } from "../../../public/jsons/characterList";
-import CharItem from "./char-item";
+import CharItem from "../char-item";
 import { useContext, useState } from "react";
-import SearchCharItem from "./search-char-item";
+import SearchCharItem from "../search";
 
 export default function CharList() {
    const [search, setSearch] = useState('')
