@@ -11,7 +11,9 @@
 
 ## Sobre
 
-**Blue Lock** é uma aplicação web feita para ranquear e listar as principais habilidades dos personagens do manga Blue Block utilizando a biblioteca React-apex-charts, criei as páginas do projeto no figma para referência: [figma](https://www.figma.com/file/pgYYY3OQTEIVpnqtUGHW8D/Blue-Lock-site?type=design&node-id=0%3A1&mode=design&t=S1iikWoTtLShvTz3-1)  
+**Blue Lock** é uma aplicação web feita para listar as estatísticas dos personagens do manga Blue Block e criar formações de futebol utilizando os personagens.
+
+Criei as páginas do projeto no figma para referência: [figma](https://www.figma.com/file/pgYYY3OQTEIVpnqtUGHW8D/Blue-Lock-site?type=design&node-id=0%3A1&mode=design&t=S1iikWoTtLShvTz3-1)  
 
 ---
 
@@ -23,6 +25,7 @@ O projeto foi feito utilizando das seguintes tecnologias:
 - Typescript
 - Tailwind CSS
 - React-apex-charts
+- dnd-kit/core
 
 Instruções:
 
@@ -41,6 +44,8 @@ Instruções:
 - Listagem de personagens e barra de pesquisa por nome
 
 - Visualização dos statos dos personagem com a biblioteca react-apex-charts
+
+- Criação de formações de futebol utilizando a biblioteca dnd-kit/core (Em construção) 
 
 ---
 
