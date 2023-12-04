@@ -5,8 +5,8 @@ import { CSS } from '@dnd-kit/utilities';
 
 type draggItemProps = {
    id: UniqueIdentifier
-   image: any
-   name: string
+   image?: any
+   name?: string
 }
 
 export function DraggableItem({id, image, name}: draggItemProps) {
@@ -19,7 +19,7 @@ export function DraggableItem({id, image, name}: draggItemProps) {
    };
 
    return (
-      <button
+      <div
          ref={setNodeRef}
          style={style}
          {...listeners}
@@ -44,6 +44,6 @@ export function DraggableItem({id, image, name}: draggItemProps) {
          <div className="h-[30px] bg-color2 flex justify-center pt-[10px] font-roboto text-xs text-white font-bold uppercase">
             {name}
          </div>
-      </button>
+      </div>
    );
 }
