@@ -11,7 +11,7 @@ export default function FormationMenu() {
    const [dropp, setDropp] = useState<any>(['', '', '', '', '', '', '', '', '', '', '']);
    const [dragg, setDragg] = useState<any>([])
    const [search, setSearch] = useState('')
-   // const [activeId, setActiveId] = useState(null);
+   const [activeDrag, setActiveDrag] = useState(null);
 
    useEffect(() => {
       const draggables = (
@@ -25,17 +25,14 @@ export default function FormationMenu() {
          ))
       );
       setDragg(draggables)
-      // console.log(draggables)
    }, [])
 
-   // function handleDragStart(event: any) {
-   //    setActiveId(event.active.id);
-   //  }
+   function handleDragStart(event: any) {
+      setActiveDrag(event.active.id);
+   }
 
    function handleDragEnd(event: any) {
-
-      // setActiveId(null);
-
+      setActiveDrag(null);
       const { active, over } = event;
       const copyDropp = [...dropp];
       const copyDragg = [...dragg];
@@ -92,33 +89,47 @@ export default function FormationMenu() {
 
       setDropp(copyDropp)
       setDragg(copyDragg)
-      // console.log(dropp, dragg)
    }
 
    return (
       <div className='container flex flex-col gap-8'>
-         <DndContext onDragEnd={handleDragEnd}  id={'main'}>
+         <DndContext onDragEnd={handleDragEnd} onDragStart={handleDragStart} id={'main'}>
+
+            {/* estou utilizando "DragOverlay" para resovler um bug que ocorre com os "DraggableItens" que estão dentro de um "scroll" */}
+            <DragOverlay dropAnimation={null}>
+               {activeDrag ? (
+                  <DraggableItem
+                     id={activeDrag}
+                     image={dragg[activeDrag - 1].image}
+                     name={dragg[activeDrag - 1].name}
+                  />
+               ) : null}
+            </DragOverlay>
 
             <SearchCharItem onChange={(e: any) => setSearch(e.target.value.toUpperCase())} />
 
             <div className='flex'>
-               <div className='overflow-y-auto overflow-x-hidden flex flex-col pr-4 gap-4 h-[1260px]'>
+               <div className='overflow-y-auto overflow-x-hidden flex flex-col pr-4 gap-4 h-[1260px] relative'>
 
                   {dragg.map((item: any) => (
                      item.selected === 'off' && item.name.toUpperCase().includes(search.toUpperCase())
                         ?
-                        <DraggableItem
-                           key={item.id}
-                           id={item.id}
-                           image={item.image}
-                           name={item.name}
-                        />
+                        item.id === activeDrag 
+                           ?
+                           <div key={activeDrag} className='min-w-[140px] min-h-[170px]'></div>
+                           :
+                           <DraggableItem
+                              key={item.id}
+                              id={item.id}
+                              image={item.image}
+                              name={item.name}
+                           />
                         :
                         null
                   ))}
                </div>
 
-               <div className='bg-red-500'>
+               <div>
                   <DroppableItem id={0}>
                      {
                         dropp[0] !== ''
@@ -150,17 +161,6 @@ export default function FormationMenu() {
                   </DroppableItem>
                </div>
             </div>
-
-            {/* <DragOverlay>
-               {activeId ? (
-                  <DraggableItem
-                     id={activeId}
-                     // image={dragg[dropp[1] - 1].image}
-                     // name={dragg[dropp[1] - 1].name}
-                  />
-               ) : null}
-            </DragOverlay> */}
-
          </DndContext>
       </div>
    )
