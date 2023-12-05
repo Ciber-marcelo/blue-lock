@@ -109,14 +109,14 @@ export default function FormationMenu() {
             <SearchCharItem onChange={(e: any) => setSearch(e.target.value.toUpperCase())} />
 
             <div className='flex'>
-               <div className='overflow-y-auto overflow-x-hidden flex flex-col pr-4 gap-4 h-[1260px] relative'>
+               <div className='overflow-y-auto overflow-x-hidden flex flex-col pr-4 gap-4 h-[1260px]'>
 
                   {dragg.map((item: any) => (
                      item.selected === 'off' && item.name.toUpperCase().includes(search.toUpperCase())
                         ?
                         item.id === activeDrag 
                            ?
-                           <div key={activeDrag} className='min-w-[140px] min-h-[170px]'></div>
+                           <div key={activeDrag} className='min-w-[100px] min-h-[121px]'></div>
                            :
                            <DraggableItem
                               key={item.id}

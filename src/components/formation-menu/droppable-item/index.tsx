@@ -14,8 +14,8 @@ export function DroppableItem({id, children}: any) {
       ref={setNodeRef} 
       style={style} 
       className='
-        w-[140px] 
-        h-[170px]
+        w-[100px] 
+        h-[121px]
         rounded-md
         bg-gray-400
       '>
