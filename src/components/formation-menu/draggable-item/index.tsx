@@ -27,8 +27,8 @@ export function DraggableItem({id, image, name}: draggItemProps) {
          className={`
             min-w-[100px] 
             max-w-[100px] 
-            min-h-[121px] 
-            max-h-[121px] 
+            min-h-[120px] 
+            max-h-[120px] 
             bg-color1
             border-[5px]
             border-color2 
@@ -41,7 +41,7 @@ export function DraggableItem({id, image, name}: draggItemProps) {
             src={image}
             alt='Character image'
          />
-         <div className="h-[24px] bg-color2 flex justify-center pt-[7px] font-roboto text-[8px] text-white font-bold uppercase">
+         <div className="h-[23px] bg-color2 flex justify-center pt-[7px] font-roboto text-[8px] text-white font-bold uppercase">
             {name}
          </div>
       </div>
