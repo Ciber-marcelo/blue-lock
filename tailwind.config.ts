@@ -18,6 +18,10 @@ const config: Config = {
         color2: '#001B3D', 
         color3: '#86A5CB',
       },
+      backgroundImage: {
+        'dropBg': "url('/images/drop item.svg')",
+        'fieldBg': "url('/images/field.svg')"
+      }
     },
   },
   plugins: [],

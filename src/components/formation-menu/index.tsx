@@ -114,7 +114,7 @@ export default function FormationMenu() {
                </div>
 
                <div className='bg-red-500'>
-                  <div className='relative w-[900px] h-[700px] bg-green-500 rounded-md border-[5px] border-color2'>
+                  <div className='relative w-[900px] h-[700px] bg-fieldBg rounded-md'>
                      <DroppableItem id={0} className='absolute bottom-[20px] left-[400px]'>
                         {dropp[0] !== '' &&
                            <DraggableItem
@@ -126,13 +126,24 @@ export default function FormationMenu() {
                         }
                      </DroppableItem>
 
-                     <DroppableItem id={1}>
+                     <DroppableItem id={1} className='absolute bottom-[120px] left-[250px]'>
                         {dropp[1] !== '' &&
                               <DraggableItem
                                  key={dragg[dropp[1] - 1].id}
                                  id={dragg[dropp[1] - 1].id}
                                  image={dragg[dropp[1] - 1].image}
                                  name={dragg[dropp[1] - 1].name}
+                              />
+                        }
+                     </DroppableItem>
+
+                     <DroppableItem id={2} className='absolute bottom-[120px] left-[550px]'>
+                        {dropp[2] !== '' &&
+                              <DraggableItem
+                                 key={dragg[dropp[2] - 1].id}
+                                 id={dragg[dropp[2] - 1].id}
+                                 image={dragg[dropp[2] - 1].image}
+                                 name={dragg[dropp[2] - 1].name}
                               />
                         }
                      </DroppableItem>

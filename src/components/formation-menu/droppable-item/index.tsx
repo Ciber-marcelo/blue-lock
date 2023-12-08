@@ -1,4 +1,5 @@
 import { useDroppable } from '@dnd-kit/core';
+import yy from '../../../../public/images/drop item.png'
 
 type dropItemProps = {
   id: number
@@ -6,7 +7,7 @@ type dropItemProps = {
   className?: string
 }
 
-export function DroppableItem({id, className, children}: dropItemProps) {
+export function DroppableItem({ id, className, children }: dropItemProps) {
   const { isOver, setNodeRef } = useDroppable({
     id: id,
   });
@@ -16,16 +17,16 @@ export function DroppableItem({id, className, children}: dropItemProps) {
   };
 
   return (
-    <div 
-      ref={setNodeRef} 
-      style={style} 
+    <div
+      ref={setNodeRef}
+      style={style}
       //usei "overflow-hidden" pra tentar esconder um bug visual do dnd-kit
       className={`
         overflow-hidden  
         w-[100px] 
         h-[120px]
         rounded-md
-        bg-color1
+        bg-dropBg
         ${className}
       `}>
       {children}
