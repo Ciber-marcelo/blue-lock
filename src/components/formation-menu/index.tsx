@@ -8,13 +8,26 @@ import { DroppableItem } from './droppable-item';
 import { DraggableItem } from "./draggable-item";
 import SearchCharItem from '../search';
 import { Loading } from '../loading';
+import { ButtonDnd } from './button-dnd';
 
 export default function FormationMenu() {
    const [dropp, setDropp] = useState<any>(['', '', '', '', '', '', '', '', '', '', '']);
    const [dragg, setDragg] = useState<any>([])
    const [activeDrag, setActiveDrag] = useState(null);
    const [search, setSearch] = useState('')
-   const [tactic, setTactic] = useState<any>('')
+   const [tactic, setTactic] = useState<any>([
+      'bottom-[20px] left-[400px]',
+      'bottom-[120px] left-[250px]',
+      'bottom-[120px] left-[550px]',
+      'bottom-[140px] left-[40px]',
+      'bottom-[140px] left-[760px]',
+      'bottom-[280px] left-[400px]',
+      'bottom-[380px] left-[250px]',
+      'bottom-[380px] left-[550px]',
+      'bottom-[520px] left-[40px]',
+      'bottom-[520px] left-[760px]',
+      'bottom-[560px] left-[400px]',
+   ])
 
    useEffect(() => {
       const draggables = (
@@ -28,15 +41,10 @@ export default function FormationMenu() {
          ))
       );
       setDragg(draggables)
-      handleTactic(0)
    }, [])
 
-   async function handleTactic(n: number) {
-      setTactic(null)
-      const response = await formations[0].position
-      if (response !== null) {
-         setTactic(response)
-      } 
+   function handleTactic(n: number) {
+      setTactic(formations[n].position)
    }
 
    function handleDragStart(event: any) {
@@ -125,26 +133,25 @@ export default function FormationMenu() {
                   ))}
                </div>
 
-               <div className='bg-red-500'>
-
-                  {/* cria um componente para esse botão    */}
-                  <button onClick={() => handleTactic(1)} className='bg-blue-500'>
-                     4-3-3
-                  </button>
+               <div className='flex flex-col gap-2'>
+                  <div className='flex gap-2'>
+                     <ButtonDnd onClick={() => handleTactic(0)}>4-3-3</ButtonDnd>
+                     <ButtonDnd onClick={() => handleTactic(1)}>4-4-2</ButtonDnd>
+                  </div>
 
                   <div className='relative flex justify-center items-center w-[900px] h-[700px] bg-fieldBg rounded-md'>
                      {tactic !== null
                         ?
                         dropp.map((item: any, i: number) => (
                            <DroppableItem id={i} key={i} className={`absolute ${tactic[i]}`}>
-                           {item !== '' &&
-                              <DraggableItem
-                                 key={dragg[item - 1].id}
-                                 id={dragg[item - 1].id}
-                                 image={dragg[item - 1].image}
-                                 name={dragg[item - 1].name}
-                              />
-                           }
+                              {item !== '' &&
+                                 <DraggableItem
+                                    key={dragg[item - 1].id}
+                                    id={dragg[item - 1].id}
+                                    image={dragg[item - 1].image}
+                                    name={dragg[item - 1].name}
+                                 />
+                              }
                            </DroppableItem>
                         ))
                         :
