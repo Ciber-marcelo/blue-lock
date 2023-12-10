@@ -2,16 +2,19 @@
 
 import { useState, useEffect } from 'react';
 import { characterList } from "../../../public/jsons/characterList"
+import { formations } from "../../../public/jsons/formations"
 import { DndContext, DragOverlay } from "@dnd-kit/core"
 import { DroppableItem } from './droppable-item';
 import { DraggableItem } from "./draggable-item";
 import SearchCharItem from '../search';
+import { Loading } from '../loading';
 
 export default function FormationMenu() {
    const [dropp, setDropp] = useState<any>(['', '', '', '', '', '', '', '', '', '', '']);
    const [dragg, setDragg] = useState<any>([])
-   const [search, setSearch] = useState('')
    const [activeDrag, setActiveDrag] = useState(null);
+   const [search, setSearch] = useState('')
+   const [tactic, setTactic] = useState<any>('')
 
    useEffect(() => {
       const draggables = (
@@ -25,7 +28,16 @@ export default function FormationMenu() {
          ))
       );
       setDragg(draggables)
+      handleTactic(0)
    }, [])
+
+   async function handleTactic(n: number) {
+      setTactic(null)
+      const response = await formations[0].position
+      if (response !== null) {
+         setTactic(response)
+      } 
+   }
 
    function handleDragStart(event: any) {
       setActiveDrag(event.active.id);
@@ -94,7 +106,7 @@ export default function FormationMenu() {
 
             <SearchCharItem onChange={(e: any) => setSearch(e.target.value.toUpperCase())} />
 
-            <div className='flex justify-between overflow-hidden'>
+            <div className='flex justify-between'>
                <div className='overflow-y-auto overflow-x-hidden flex flex-col pr-2 gap-2 h-[760px]'>
                   {dragg.map((item: any) => (
                      item.selected === 'off' && item.name.toUpperCase().includes(search.toUpperCase()) ?
@@ -114,39 +126,30 @@ export default function FormationMenu() {
                </div>
 
                <div className='bg-red-500'>
-                  <div className='relative w-[900px] h-[700px] bg-fieldBg rounded-md'>
-                     <DroppableItem id={0} className='absolute bottom-[20px] left-[400px]'>
-                        {dropp[0] !== '' &&
-                           <DraggableItem
-                              key={dragg[dropp[0] - 1].id}
-                              id={dragg[dropp[0] - 1].id}
-                              image={dragg[dropp[0] - 1].image}
-                              name={dragg[dropp[0] - 1].name}
-                           />
-                        }
-                     </DroppableItem>
 
-                     <DroppableItem id={1} className='absolute bottom-[120px] left-[250px]'>
-                        {dropp[1] !== '' &&
-                              <DraggableItem
-                                 key={dragg[dropp[1] - 1].id}
-                                 id={dragg[dropp[1] - 1].id}
-                                 image={dragg[dropp[1] - 1].image}
-                                 name={dragg[dropp[1] - 1].name}
-                              />
-                        }
-                     </DroppableItem>
+                  {/* cria um componente para esse botão    */}
+                  <button onClick={() => handleTactic(1)} className='bg-blue-500'>
+                     4-3-3
+                  </button>
 
-                     <DroppableItem id={2} className='absolute bottom-[120px] left-[550px]'>
-                        {dropp[2] !== '' &&
+                  <div className='relative flex justify-center items-center w-[900px] h-[700px] bg-fieldBg rounded-md'>
+                     {tactic !== null
+                        ?
+                        dropp.map((item: any, i: number) => (
+                           <DroppableItem id={i} key={i} className={`absolute ${tactic[i]}`}>
+                           {item !== '' &&
                               <DraggableItem
-                                 key={dragg[dropp[2] - 1].id}
-                                 id={dragg[dropp[2] - 1].id}
-                                 image={dragg[dropp[2] - 1].image}
-                                 name={dragg[dropp[2] - 1].name}
+                                 key={dragg[item - 1].id}
+                                 id={dragg[item - 1].id}
+                                 image={dragg[item - 1].image}
+                                 name={dragg[item - 1].name}
                               />
-                        }
-                     </DroppableItem>
+                           }
+                           </DroppableItem>
+                        ))
+                        :
+                        <Loading />
+                     }
                   </div>
                </div>
             </div>
