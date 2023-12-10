@@ -27,8 +27,10 @@ export function DroppableItem({ id, className, children }: dropItemProps) {
         h-[120px]
         rounded-md
         bg-dropBg
+        transition-all
         ${className}
-      `}>
+      `}
+    >
       {children}
     </div>
   );

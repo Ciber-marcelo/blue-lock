@@ -8,8 +8,7 @@ export const metadata: Metadata = {
 
 export default function CreateFormation() {
    return (
-      <div className="flex items-center flex-col gap-10 mt-10">
-         Under construction / Em construção 
+      <div>
          <FormationMenu />
       </div>
    )
