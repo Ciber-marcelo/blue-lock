@@ -1,6 +1,8 @@
-<svg width="900" height="700" viewBox="0 0 900 700" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="2.5" y="2.5" width="895" height="695" rx="2.5" fill="#00753A" stroke="#001B3D" stroke-width="5"/>
-<rect x="226.5" y="501.5" width="447" height="197" stroke="#001B3D" stroke-width="3"/>
-<rect x="338.5" y="601.5" width="222" height="97" stroke="#001B3D" stroke-width="3"/>
+<svg width="900" height="660" viewBox="0 0 900 660" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="2.5" y="2.5" width="895" height="655" rx="2.5" fill="#00753A" stroke="#001B3D" stroke-width="5"/>
+<rect x="226.5" y="461.5" width="447" height="197" stroke="#001B3D" stroke-width="3"/>
+<rect x="338.5" y="561.5" width="222" height="97" stroke="#001B3D" stroke-width="3"/>
+<path d="M450.179 411.5C396.28 411.5 352.492 454.792 351.69 508.5L356.561 508.5L378.156 508.5L450.179 508.5L520.89 508.5L542.321 508.5L548.148 508.5H548.668C547.866 454.792 504.078 411.5 450.179 411.5Z" stroke="#001B3D" stroke-width="3"/>
+<rect x="350" y="463" width="200" height="60" fill="#00753A"/>
 <path d="M450 98.5C396.101 98.5 352.313 55.2084 351.511 1.5L356.382 1.5L377.977 1.5L450 1.5L520.711 1.5L542.142 1.5L547.968 1.5H548.489C547.687 55.2084 503.899 98.5 450 98.5Z" stroke="#001B3D" stroke-width="3"/>
 </svg>

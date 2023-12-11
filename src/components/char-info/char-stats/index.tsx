@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { formatScoreNumber } from "@/services/formatScoreNumber";
+import { formatScoreNumber } from "@/utils/formatScoreNumber";
 
 type statsProps = {
    image: any

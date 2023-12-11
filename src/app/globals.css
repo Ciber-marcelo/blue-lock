@@ -12,20 +12,9 @@
   @apply mx-auto w-full max-w-[1200px] px-6
 }
 
-/* *::-webkit-scrollbar {
-  width: 8px;
-}
-
-*::-webkit-scrollbar-track {
-  background: #001B3D;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: #0D4B98;
-} */
-
 .scrollbar::-webkit-scrollbar {
   height: 12px;
+  width: 12px;
 }
 
 .scrollbar::-webkit-scrollbar-track {

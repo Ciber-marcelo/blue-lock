@@ -9,6 +9,7 @@ import { DraggableItem } from "./draggable-item";
 import SearchCharItem from '../search';
 import { Loading } from '../loading';
 import { ButtonDnd } from './button-dnd';
+import { Card } from './card';
 
 export default function FormationMenu() {
    const [dropp, setDropp] = useState<any>(['', '', '', '', '', '', '', '', '', '', '']);
@@ -16,17 +17,17 @@ export default function FormationMenu() {
    const [activeDrag, setActiveDrag] = useState(null);
    const [search, setSearch] = useState('')
    const [tactic, setTactic] = useState<any>([
-      'bottom-[20px] left-[400px]',
-      'bottom-[120px] left-[250px]',
-      'bottom-[120px] left-[550px]',
-      'bottom-[140px] left-[40px]',
-      'bottom-[140px] left-[760px]',
-      'bottom-[280px] left-[400px]',
-      'bottom-[380px] left-[250px]',
-      'bottom-[380px] left-[550px]',
-      'bottom-[520px] left-[40px]',
-      'bottom-[520px] left-[760px]',
-      'bottom-[560px] left-[400px]',
+      'bottom-[10px] left-[400px]',
+      'bottom-[110px] left-[250px]',
+      'bottom-[110px] left-[550px]',
+      'bottom-[130px] left-[40px]',
+      'bottom-[130px] left-[760px]',
+      'bottom-[260px] left-[400px]',
+      'bottom-[370px] left-[250px]',
+      'bottom-[370px] left-[550px]',
+      'bottom-[500px] left-[40px]',
+      'bottom-[500px] left-[760px]',
+      'bottom-[530px] left-[400px]',
    ])
 
    useEffect(() => {
@@ -98,69 +99,74 @@ export default function FormationMenu() {
    }
 
    return (
-      <div className='container flex flex-col gap-8 mt-16'>
-         <DndContext onDragEnd={handleDragEnd} onDragStart={handleDragStart} id={'main'} autoScroll={false}>
+      <>
+         <div className='container hidden min-[1100px]:flex flex-col gap-8 mt-16'>
+            <DndContext onDragEnd={handleDragEnd} onDragStart={handleDragStart} id={'main'} autoScroll={false}>
 
-            {/* estou utilizando "DragOverlay" para resovler um bug que ocorre com os "DraggableItens" que estão dentro de um "scroll" */}
-            <DragOverlay dropAnimation={null}>
-               {activeDrag &&
-                  <DraggableItem
-                     id={activeDrag}
-                     image={dragg[activeDrag - 1].image}
-                     name={dragg[activeDrag - 1].name}
-                  />
-               }
-            </DragOverlay>
+               {/* estou utilizando "DragOverlay" para resovler um bug que ocorre com os "DraggableItens" que estão dentro de um "scroll" */}
+               <DragOverlay dropAnimation={null}>
+                  {activeDrag &&
+                     <DraggableItem
+                        id={activeDrag}
+                        image={dragg[activeDrag - 1].image}
+                        name={dragg[activeDrag - 1].name}
+                     />
+                  }
+               </DragOverlay>
 
-            <SearchCharItem onChange={(e: any) => setSearch(e.target.value.toUpperCase())} />
+               <SearchCharItem onChange={(e: any) => setSearch(e.target.value.toUpperCase())} />
 
-            <div className='flex justify-between'>
-               <div className='overflow-y-auto overflow-x-hidden flex flex-col pr-2 gap-2 h-[760px]'>
-                  {dragg.map((item: any) => (
-                     item.selected === 'off' && item.name.toUpperCase().includes(search.toUpperCase()) ?
-                        item.id === activeDrag
-                           ?
-                           <div key={activeDrag} className='min-w-[100px] min-h-[120px]'></div>
+               <div className='flex justify-between'>
+                  <div className='overflow-y-auto overflow-x-hidden scrollbar flex flex-col pr-2 gap-2 h-[720px]'>
+                     {dragg.map((item: any) => (
+                        item.selected === 'off' && item.name.toUpperCase().includes(search.toUpperCase()) ?
+                           item.id === activeDrag
+                              ?
+                              <div key={activeDrag} className='min-w-[100px] min-h-[120px]'></div>
+                              :
+                              <DraggableItem
+                                 key={item.id}
+                                 id={item.id}
+                                 image={item.image}
+                                 name={item.name}
+                              />
                            :
-                           <DraggableItem
-                              key={item.id}
-                              id={item.id}
-                              image={item.image}
-                              name={item.name}
-                           />
-                        :
-                        null
-                  ))}
-               </div>
-
-               <div className='flex flex-col gap-2'>
-                  <div className='flex gap-2'>
-                     <ButtonDnd onClick={() => handleTactic(0)}>4-3-3</ButtonDnd>
-                     <ButtonDnd onClick={() => handleTactic(1)}>4-4-2</ButtonDnd>
+                           null
+                     ))}
                   </div>
 
-                  <div className='relative flex justify-center items-center w-[900px] h-[700px] bg-fieldBg rounded-md'>
-                     {tactic !== null
-                        ?
-                        dropp.map((item: any, i: number) => (
-                           <DroppableItem id={i} key={i} className={`absolute ${tactic[i]}`}>
-                              {item !== '' &&
-                                 <DraggableItem
-                                    key={dragg[item - 1].id}
-                                    id={dragg[item - 1].id}
-                                    image={dragg[item - 1].image}
-                                    name={dragg[item - 1].name}
-                                 />
-                              }
-                           </DroppableItem>
-                        ))
-                        :
-                        <Loading />
-                     }
+                  <div className='flex flex-col gap-2'>
+                     <div className='flex gap-2'>
+                        <ButtonDnd onClick={() => handleTactic(0)}>4-3-3</ButtonDnd>
+                        <ButtonDnd onClick={() => handleTactic(1)}>4-4-2</ButtonDnd>
+                        <ButtonDnd onClick={() => handleTactic(2)}>3-5-2</ButtonDnd>
+                     </div>
+
+                     <div className='relative flex justify-center items-center w-[900px] h-[660px] bg-fieldBg rounded-md'>
+                        {tactic !== null
+                           ?
+                           dropp.map((item: any, i: number) => (
+                              <DroppableItem id={i} key={i} className={`absolute ${tactic[i]}`}>
+                                 {item !== '' &&
+                                    <DraggableItem
+                                       key={dragg[item - 1].id}
+                                       id={dragg[item - 1].id}
+                                       image={dragg[item - 1].image}
+                                       name={dragg[item - 1].name}
+                                    />
+                                 }
+                              </DroppableItem>
+                           ))
+                           :
+                           <Loading />
+                        }
+                     </div>
                   </div>
                </div>
-            </div>
-         </DndContext>
-      </div>
+            </DndContext>
+         </div>
+
+         <Card />
+      </>
    )
 }
