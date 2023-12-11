@@ -8,9 +8,10 @@ type draggItemProps = {
    id: UniqueIdentifier
    image: any
    name: string
+   rating: number
 }
 
-export function DraggableItem({id, image, name}: draggItemProps) {
+export function DraggableItem({id, image, name, rating}: draggItemProps) {
    const { attributes, listeners, setNodeRef, transform } = useDraggable({
       id: id
    });
@@ -34,8 +35,26 @@ export function DraggableItem({id, image, name}: draggItemProps) {
             border-[5px]
             border-color2 
             rounded-md
+            relative
          `}
-      >
+      >  
+         <div className="
+            absolute 
+            left-[1px]
+            top-[1px]
+            flex
+            justify-center
+            items-center
+            h-6 
+            w-6 
+            bg-color2
+            rounded-md
+            font-roboto  
+            text-white 
+            font-bold
+         ">
+         {rating}
+         </div>
          <Image
             width={160}
             height={160}
