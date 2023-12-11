@@ -2,11 +2,12 @@ import Image from "next/image";
 import { useDraggable } from '@dnd-kit/core';
 import { UniqueIdentifier } from '@dnd-kit/core';
 import { CSS } from '@dnd-kit/utilities';
+import { formatName } from "@/utils/formatName";
 
 type draggItemProps = {
    id: UniqueIdentifier
-   image?: any
-   name?: string
+   image: any
+   name: string
 }
 
 export function DraggableItem({id, image, name}: draggItemProps) {
@@ -41,8 +42,8 @@ export function DraggableItem({id, image, name}: draggItemProps) {
             src={image}
             alt='Character image'
          />
-         <div className="h-[23px] bg-color2 flex justify-center pt-[7px] font-roboto text-[8px] text-white font-bold uppercase">
-            {name}
+         <div className="h-[23px] bg-color2 flex justify-center pt-[5px] font-roboto text-xs text-white font-bold uppercase">
+             {formatName(name)}
          </div>
       </div>
    );
