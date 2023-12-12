@@ -22,8 +22,12 @@ import iemon from '../images/chars/iemon.svg'
 import iemonIcon  from '../images/chars-icons/iemon.svg'
 import kira from '../images/chars/kira.svg'
 import kiraIcon  from '../images/chars-icons/kira.svg'
+import sae from '../images/chars/sae.svg'
+import saeIcon  from '../images/chars-icons/sae.svg'
 import kaiser from '../images/chars/kaiser.svg'
 import kaiserIcon  from '../images/chars-icons/kaiser.svg'
+import lorenzo from '../images/chars/lorenzo.svg'
+import lorenzoIcon  from '../images/chars-icons/lorenzo.svg'
 
 export const characterList = [
    {
@@ -208,6 +212,21 @@ export const characterList = [
    },
    {
       id: 13,
+      image: sae,
+      icon: saeIcon ,
+      name: 'Itoshi Sae',
+      stats: {
+         total: 98,
+         speed: 81,
+         defense: 72,
+         pass: 99,
+         dribble: 96,
+         shoot: 88,
+         offense: 90
+      } 
+   },
+   {
+      id: 14,
       image: kaiser,
       icon: kaiserIcon ,
       name: 'Michael Kaiser',
@@ -219,6 +238,21 @@ export const characterList = [
          dribble: 86,
          shoot: 98,
          offense: 96
+      } 
+   },
+   {
+      id: 15,
+      image: lorenzo,
+      icon: lorenzoIcon ,
+      name: 'Don Lorenzo',
+      stats: {
+         total: 96,
+         speed: 83,
+         defense: 99,
+         pass: 87,
+         dribble: 93,
+         shoot: 82,
+         offense: 84
       } 
    },
 ];
