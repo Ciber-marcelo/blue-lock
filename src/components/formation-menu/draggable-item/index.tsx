@@ -40,15 +40,14 @@ export function DraggableItem({id, image, name, rating}: draggItemProps) {
       >  
          <div className="
             absolute 
-            left-[1px]
-            top-[1px]
+            left-[0px]
+            top-[0px]
             flex
             justify-center
             items-center
-            h-6 
-            w-6 
+            pr-[4px]
+             rounded-br
             bg-color2
-            rounded-md
             font-roboto  
             text-white 
             font-bold
