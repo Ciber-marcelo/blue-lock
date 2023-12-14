@@ -11,7 +11,8 @@ export function ButtonDnd({children, onClick}: buttonProps) {
             bg-color1
             border-color2
             border-[5px]
-            rounded-md
+            border-l-0
+            rounded-r-md
             px-[7px]
             py-[4px]
             w-fit

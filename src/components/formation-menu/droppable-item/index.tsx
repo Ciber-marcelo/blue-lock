@@ -1,5 +1,4 @@
 import { useDroppable } from '@dnd-kit/core';
-import yy from '../../../../public/images/drop item.png'
 
 type dropItemProps = {
   id: number

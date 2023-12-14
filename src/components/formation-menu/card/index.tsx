@@ -5,7 +5,7 @@ export function Card() {
             flex
             flex-col
             items-center 
-            min-[1100px]:hidden 
+            min-[1170px]:hidden 
             bg-color1 
             rounded
             py-4

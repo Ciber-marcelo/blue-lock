@@ -1,11 +1,10 @@
 import Image from "next/image";
 import { useDraggable } from '@dnd-kit/core';
-import { UniqueIdentifier } from '@dnd-kit/core';
 import { CSS } from '@dnd-kit/utilities';
 import { formatName } from "@/utils/formatName";
 
 type draggItemProps = {
-   id: UniqueIdentifier
+   id: number
    image: any
    name: string
    rating: number
@@ -26,7 +25,7 @@ export function DraggableItem({id, image, name, rating}: draggItemProps) {
          style={style}
          {...listeners}
          {...attributes}
-         className={`
+         className="
             min-w-[100px] 
             max-w-[100px] 
             min-h-[120px] 
@@ -36,17 +35,15 @@ export function DraggableItem({id, image, name, rating}: draggItemProps) {
             border-color2 
             rounded-md
             relative
-         `}
+            select-none
+         "
       >  
          <div className="
             absolute 
             left-[0px]
-            top-[0px]
-            flex
-            justify-center
-            items-center
+            top-[-2px]
             pr-[4px]
-             rounded-br
+            rounded-br
             bg-color2
             font-roboto  
             text-white 

@@ -217,10 +217,10 @@ export const characterList = [
       name: 'Itoshi Sae',
       stats: {
          total: 98,
-         speed: 81,
+         speed: 85,
          defense: 72,
-         pass: 99,
-         dribble: 96,
+         pass: 98,
+         dribble: 95,
          shoot: 88,
          offense: 90
       } 
