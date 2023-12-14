@@ -1,21 +1,22 @@
 'use client'
 
 import { useState, useEffect } from 'react';
-import { characterList } from "../../../public/jsons/characterList"
 import { DndContext, DragOverlay } from "@dnd-kit/core"
+import { characterList } from "../../../public/jsons/characterList"
 import { DroppableItem } from './droppable-item';
 import { DraggableItem } from "./draggable-item";
 import SearchCharItem from '../search';
 import { Loading } from '../loading';
 import { ButtonDnd } from './button-dnd';
 import { Card } from './card';
+import { DisabledItem } from './disabled-item';
 
 export default function FormationMenu() {
    const [dropp, setDropp] = useState<any>(['', '', '', '', '', '', '', '', '', '', '']);
-   const [dragg, setDragg] = useState<any>([])
+   const [dragg, setDragg] = useState<any>([]);
    const [activeDrag, setActiveDrag] = useState(null);
-   const [search, setSearch] = useState('')
-   const [tactic, setTactic] = useState<any>(null)
+   const [search, setSearch] = useState('');
+   const [tactic, setTactic] = useState<any>(null);
 
    useEffect(() => {
       const draggables = (
@@ -81,6 +82,23 @@ export default function FormationMenu() {
 
    function handleDragStart(event: any) {
       setActiveDrag(event.active.id);
+      const copyDropp = [...dropp];
+      const copyDragg = [...dragg];
+
+      //seto o "dropp" como "vazio" quando retiro o "dragg" dentro dele(presisa fazer isso para corrigir um bug visual)
+      copyDropp.map((item, i) => (
+         item === event.active.id &&
+         copyDropp.splice(i, 1, '')
+      ));
+
+      //seto o valor "on" em um "dragg" que foi solto em um elemento "droppable"
+      // copyDragg.map((item) => (
+      //    item.id === event.active.id &&
+      //    copyDragg.splice(item.id - 1, 1, { ...item, selected: 'on' })
+      // ));
+
+      setDropp(copyDropp)
+      // setDragg(copyDragg)
    }
 
    function handleDragEnd(event: any) {
@@ -130,7 +148,7 @@ export default function FormationMenu() {
 
    return (
       <>
-         <div className='container hidden min-[1100px]:flex flex-col gap-8 mt-16'>
+         <div className='container hidden min-[1170px]:flex flex-col gap-8 mt-16'>
             <DndContext onDragEnd={handleDragEnd} onDragStart={handleDragStart} id={'main'} autoScroll={false}>
 
                {/* estou utilizando "DragOverlay" para resovler um bug que ocorre com os "DraggableItens" que estão dentro de um "scroll" */}
@@ -148,33 +166,32 @@ export default function FormationMenu() {
                <SearchCharItem onChange={(e: any) => setSearch(e.target.value.toUpperCase())} />
 
                <div className='flex justify-between'>
-                  <div className='overflow-y-auto overflow-x-hidden scrollbar flex flex-col pr-2 gap-2 h-[720px]'>
+                  <div className='overflow-y-auto overflow-x-hidden scrollbar flex flex-col pr-2 gap-2 h-[660px]'>
                      {dragg.map((item: any) => (
-                        item.selected === 'off' && item.name.toUpperCase().includes(search.toUpperCase()) ?
+                        item.selected === 'off' && item.name.toUpperCase().includes(search.toUpperCase())
+                           ?
                            item.id === activeDrag
                               ?
-                              <div key={activeDrag} className='min-w-[100px] min-h-[120px] border-[5px] rounded-md border-color2'></div>
+                              <DisabledItem key={item.id} image={item.image} name={item.name} rating={item.rating} />
                               :
-                              <DraggableItem
-                                 key={item.id}
-                                 id={item.id}
-                                 image={item.image}
-                                 name={item.name}
-                                 rating={item.rating}
-                              />
+                              <DraggableItem key={item.id} id={item.id} image={item.image} name={item.name} rating={item.rating} />
                            :
-                           <div key={item.id} className='min-w-[100px] min-h-[120px] border-[5px] rounded-md border-color2'></div>
+                           item.name.toUpperCase().includes(search.toUpperCase())
+                              ?
+                              <DisabledItem key={item.id} image={item.image} name={item.name} rating={item.rating} />
+                              :
+                              null
                      ))}
                   </div>
 
-                  <div className='flex flex-col gap-2'>
-                     <div className='flex gap-2'>
+                  <div className='flex flex-row-reverse '>
+                     <div className='flex flex-col gap-1 mt-1'>
                         <ButtonDnd onClick={() => handleTactic('4-3-3')}>4-3-3</ButtonDnd>
                         <ButtonDnd onClick={() => handleTactic('4-4-2')}>4-4-2</ButtonDnd>
                         <ButtonDnd onClick={() => handleTactic('3-5-2')}>3-5-2</ButtonDnd>
                      </div>
 
-                     <div className='relative flex justify-center items-center w-[900px] h-[660px] bg-fieldBg rounded-md'>
+                     <div className='relative flex justify-center items-center w-[900px] h-[660px] bg-fieldBg rounded-md select-none'>
                         {tactic !== null
                            ?
                            dropp.map((item: any, i: number) => (
