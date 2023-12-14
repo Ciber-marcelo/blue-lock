@@ -15,13 +15,14 @@ type statsProps = {
 export default function CharStats({ image, total, speed, defense, pass, dribble, shoot, offense }: statsProps) {
 
    return (
-      <div className='flex w-full'>
+      <div className='flex w-full select-none'>
          <div className="flex w-full justify-center items-center bg-color1 px-1 border-8 border-r-0 border-color2 rounded-l-md">
             <Image
                width={250}
                height={400}
                src={image}
                alt='character image'
+               draggable={false}
             />
          </div>
          <div className="flex w-[200px] flex-col gap-2 bg-color2 p-2 rounded-r-md">

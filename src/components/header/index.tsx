@@ -29,7 +29,7 @@ export default function Header() {
           height={40}
           src='/images/blue lock logo.svg'
           alt='logo'
-          
+          draggable={false}
         />
 
         <Image
@@ -38,6 +38,7 @@ export default function Header() {
           height={40}
           src='/images/blue lock logo 2.svg'
           alt='logo'
+          draggable={false}
         />
 
         <nav className='flex items-center gap-4 sm:gap-10 font-roboto font-bold uppercase'>

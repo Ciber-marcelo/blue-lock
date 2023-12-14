@@ -27,6 +27,7 @@ export default function CharItem({ image, name, onClick }: charItemProps) {
             border-color2 
             rounded-md
             transition
+            select-none
          `}
       >
          <Image
@@ -34,6 +35,7 @@ export default function CharItem({ image, name, onClick }: charItemProps) {
             height={160}
             src={image}
             alt='Character image'
+            draggable={false}
          />
          <div className="h-[30px] bg-color2 flex justify-center pt-[10px] font-roboto text-xs text-white font-bold uppercase">
             {name}

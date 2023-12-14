@@ -9,6 +9,7 @@ export default function Footer() {
         height={30}
         src="/images/M.svg"
         alt="Logo marcelones"
+        draggable={false}
       />
       Developed by Marcelones
     </div>

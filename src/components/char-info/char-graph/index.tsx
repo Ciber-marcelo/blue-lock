@@ -86,7 +86,7 @@ export default function CharGraph({ name, speed, defense, pass, dribble, shoot, 
    }]
 
    return (
-      <div className='flex flex-col w-full h-auto sm:min-h-[430px] justify-between items-center bg-color1 border-8 border-color2 rounded-md'>
+      <div className='flex flex-col w-full h-auto sm:min-h-[430px] justify-between items-center bg-color1 border-8 border-color2 rounded-md select-none'>
          <div className='flex h-[30px] justify-center w-full bg-color2 font-roboto text-white font-bold uppercase'>
             {name} Graph
          </div>
