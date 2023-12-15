@@ -24,6 +24,16 @@ import kira from '../images/chars/kira.svg'
 import kiraIcon  from '../images/chars-icons/kira.svg'
 import barou from '../images/chars/barou.svg'
 import barouIcon  from '../images/chars-icons/barou.svg'
+import niko from '../images/chars/niko.svg'
+import nikoIcon  from '../images/chars-icons/niko.svg'
+import junichi from '../images/chars/junichi.svg'
+import junichiIcon  from '../images/chars-icons/junichi.svg'
+import nagi from '../images/chars/nagi.svg'
+import nagiIcon  from '../images/chars-icons/nagi.svg'
+import reo from '../images/chars/reo.svg'
+import reoIcon  from '../images/chars-icons/reo.svg'
+import zantetsu from '../images/chars/zantetsu.svg'
+import zantetsuIcon  from '../images/chars-icons/zantetsu.svg'
 import sae from '../images/chars/sae.svg'
 import saeIcon  from '../images/chars-icons/sae.svg'
 import kaiser from '../images/chars/kaiser.svg'
@@ -37,7 +47,7 @@ export const characterList = [
       id: 1,
       image: isagi,
       icon: isagiIcon ,
-      name: 'Isagi Yoichi',
+      name: 'Yoichi Isagi',
       stats: {
          total: 88,
          speed: 77,
@@ -52,7 +62,7 @@ export const characterList = [
       id: 2,
       image: bachira,
       icon: bachiraIcon ,
-      name: 'Bachira Meguru',
+      name: 'Meguru Bachira',
       stats: {
          total: 86,
          speed: 84,
@@ -67,7 +77,7 @@ export const characterList = [
       id: 3,
       image: kunigami,
       icon: kunigamiIcon ,
-      name: 'Kunigami Rensuke',
+      name: 'Rensuke Kunigami',
       stats: {
          total: 91,
          speed: 85,
@@ -82,7 +92,7 @@ export const characterList = [
       id: 4,
       image: chigiri,
       icon: chigiriIcon ,
-      name: 'Chigiri Hyoma',
+      name: 'Hyoma Chigiri',
       stats: {
          total: 90,
          speed: 98,
@@ -97,7 +107,7 @@ export const characterList = [
       id: 5,
       image: gagamaru,
       icon: gagamaruIcon ,
-      name: 'Gagamaru Gin',
+      name: 'Gin Gagamaru',
       stats: {
          total: 87,
          speed: 87,
@@ -112,7 +122,7 @@ export const characterList = [
       id: 6,
       image: raichi,
       icon: raichiIcon ,
-      name: 'Raichi Jingo',
+      name: 'Jingo Raichi',
       stats: {
          total: 81,
          speed: 77,
@@ -127,7 +137,7 @@ export const characterList = [
       id: 7,
       image: igarashi,
       icon: igarashiIcon ,
-      name: 'Igarashi Gurimu',
+      name: ' Gurimu Igarashi',
       stats: {
          total: 78,
          speed: 74,
@@ -142,7 +152,7 @@ export const characterList = [
       id: 8,
       image: kuon,
       icon: kuonIcon ,
-      name: 'Kuon Wataru',
+      name: 'Wataru Kuon',
       stats: {
          total: 72,
          speed: 69,
@@ -157,7 +167,7 @@ export const characterList = [
       id: 9,
       image: naruhaya,
       icon: naruhayaIcon ,
-      name: 'Naruhaya Asahi',
+      name: 'Asahi Naruhaya',
       stats: {
          total: 69,
          speed: 70,
@@ -172,7 +182,7 @@ export const characterList = [
       id: 10,
       image: imamura,
       icon: imamuraIcon ,
-      name: 'Imamura Yudai',
+      name: 'Yudai Imamura',
       stats: {
          total: 67,
          speed: 67,
@@ -187,7 +197,7 @@ export const characterList = [
       id: 11,
       image: iemon,
       icon: iemonIcon ,
-      name: 'Iemon Okuhita',
+      name: 'Okuhita Iemon',
       stats: {
          total: 68,
          speed: 66,
@@ -202,7 +212,7 @@ export const characterList = [
       id: 12,
       image: kira,
       icon: kiraIcon ,
-      name: 'Kira Ryosuke',
+      name: 'Ryosuke Kira',
       stats: {
          total: 75,
          speed: 72,
@@ -217,7 +227,7 @@ export const characterList = [
       id: 13,
       image: barou,
       icon: barouIcon ,
-      name: 'Barou Shoei',
+      name: 'Shoei Barou',
       stats: {
          total: 92,
          speed: 80,
@@ -230,6 +240,81 @@ export const characterList = [
    },
    {
       id: 14,
+      image: niko,
+      icon: nikoIcon,
+      name: 'Ikki Niko',
+      stats: {
+         total: 82,
+         speed: 78,
+         defense: 84,
+         pass: 88,
+         dribble: 76,
+         shoot: 67,
+         offense: 82
+      } 
+   },
+   {
+      id: 15,
+      image: junichi,
+      icon: junichiIcon,
+      name: 'Wanima Junichi',
+      stats: {
+         total: 30,
+         speed: 30,
+         defense: 30,
+         pass: 30,
+         dribble: 30,
+         shoot: 30,
+         offense: 30
+      } 
+   },
+   {
+      id: 16,
+      image: nagi,
+      icon: nagiIcon,
+      name: 'Seishiro Nagi',
+      stats: {
+         total: 92,
+         speed: 82,
+         defense: 75,
+         pass: 85,
+         dribble: 86,
+         shoot: 92,
+         offense: 91
+      } 
+   },
+   {
+      id: 17,
+      image: reo,
+      icon: reoIcon,
+      name: 'Mikage Reo',
+      stats: {
+         total: 85,
+         speed: 81,
+         defense: 86,
+         pass: 89,
+         dribble: 83,
+         shoot: 82,
+         offense: 86
+      } 
+   },
+   {
+      id: 18,
+      image: zantetsu,
+      icon: zantetsuIcon,
+      name: 'Tsurugi Zantetsu',
+      stats: {
+         total: 70,
+         speed: 70,
+         defense: 70,
+         pass: 70,
+         dribble: 70,
+         shoot: 70,
+         offense: 70
+      } 
+   },
+   {
+      id: 19,
       image: sae,
       icon: saeIcon ,
       name: 'Itoshi Sae',
@@ -244,7 +329,7 @@ export const characterList = [
       } 
    },
    {
-      id: 15,
+      id: 20,
       image: kaiser,
       icon: kaiserIcon ,
       name: 'Michael Kaiser',
@@ -259,7 +344,7 @@ export const characterList = [
       } 
    },
    {
-      id: 16,
+      id: 21,
       image: lorenzo,
       icon: lorenzoIcon ,
       name: 'Don Lorenzo',
