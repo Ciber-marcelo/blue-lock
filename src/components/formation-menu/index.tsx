@@ -63,7 +63,7 @@ export default function FormationMenu() {
             'bottom-[510px] left-[250px]',
             'bottom-[510px] left-[550px]',
          ])
-      } else {
+      } else if (f === '3-5-2') {
          setTactic([
             'bottom-[10px] left-[400px]',
             'bottom-[150px] left-[400px]',
@@ -76,6 +76,20 @@ export default function FormationMenu() {
             'bottom-[360px] left-[740px]',
             'bottom-[510px] left-[250px]',
             'bottom-[510px] left-[550px]',
+         ])
+      } else {
+         setTactic([
+            'bottom-[10px] left-[400px]',
+            'bottom-[140px] left-[400px]',
+            'bottom-[140px] left-[250px]',
+            'bottom-[140px] left-[550px]',
+            'bottom-[270px] left-[280px]',
+            'bottom-[270px] left-[520px]',
+            'bottom-[270px] left-[60px]',
+            'bottom-[270px] left-[740px]',
+            'bottom-[410px] left-[550px]',
+            'bottom-[410px] left-[250px]',
+            'bottom-[530px] left-[400px]',
          ])
       }
    }
@@ -189,6 +203,7 @@ export default function FormationMenu() {
                         <ButtonDnd onClick={() => handleTactic('4-3-3')}>4-3-3</ButtonDnd>
                         <ButtonDnd onClick={() => handleTactic('4-4-2')}>4-4-2</ButtonDnd>
                         <ButtonDnd onClick={() => handleTactic('3-5-2')}>3-5-2</ButtonDnd>
+                        <ButtonDnd onClick={() => handleTactic('3-4-2-1')}>3-4-2-1</ButtonDnd>
                      </div>
 
                      <div className='relative flex justify-center items-center w-[900px] h-[660px] bg-fieldBg rounded-l-md select-none'>
