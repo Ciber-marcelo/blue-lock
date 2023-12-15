@@ -104,15 +104,7 @@ export default function FormationMenu() {
          item === event.active.id &&
          copyDropp.splice(i, 1, '')
       ));
-
-      //seto o valor "on" em um "dragg" que foi solto em um elemento "droppable"
-      // copyDragg.map((item) => (
-      //    item.id === event.active.id &&
-      //    copyDragg.splice(item.id - 1, 1, { ...item, selected: 'on' })
-      // ));
-
       setDropp(copyDropp)
-      // setDragg(copyDragg)
    }
 
    function handleDragEnd(event: any) {
