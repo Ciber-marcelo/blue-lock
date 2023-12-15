@@ -9,17 +9,15 @@ export function ButtonDnd({children, onClick}: buttonProps) {
          onClick={onClick} 
          className="
             bg-color1
-            border-color2
-            border-[5px]
-            border-l-0
-            rounded-r-md
+            rounded-md
             px-[7px]
             py-[4px]
-            w-fit
-            active:bg-color2
+            w-[85px]
+            h-[52px]
+            active:bg-color3
             transition
             font-roboto 
-            text-[24px] 
+            text-[20px] 
             text-white 
             font-bold
          "

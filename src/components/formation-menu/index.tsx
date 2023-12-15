@@ -148,7 +148,7 @@ export default function FormationMenu() {
 
    return (
       <>
-         <div className='container hidden min-[1170px]:flex flex-col gap-8 mt-16'>
+         <div className='container hidden min-[1190px]:flex flex-col gap-8 mt-16'>
             <DndContext onDragEnd={handleDragEnd} onDragStart={handleDragStart} id={'main'} autoScroll={false}>
 
                {/* estou utilizando "DragOverlay" para resovler um bug que ocorre com os "DraggableItens" que estão dentro de um "scroll" */}
@@ -185,13 +185,13 @@ export default function FormationMenu() {
                   </div>
 
                   <div className='flex flex-row-reverse '>
-                     <div className='flex flex-col gap-1 mt-1'>
+                     <div className='flex flex-col gap-[5px] bg-color2 rounded-r-md pt-[5px] pr-[5px]'>
                         <ButtonDnd onClick={() => handleTactic('4-3-3')}>4-3-3</ButtonDnd>
                         <ButtonDnd onClick={() => handleTactic('4-4-2')}>4-4-2</ButtonDnd>
                         <ButtonDnd onClick={() => handleTactic('3-5-2')}>3-5-2</ButtonDnd>
                      </div>
 
-                     <div className='relative flex justify-center items-center w-[900px] h-[660px] bg-fieldBg rounded-md select-none'>
+                     <div className='relative flex justify-center items-center w-[900px] h-[660px] bg-fieldBg rounded-l-md select-none'>
                         {tactic !== null
                            ?
                            dropp.map((item: any, i: number) => (
