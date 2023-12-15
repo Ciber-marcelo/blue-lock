@@ -23,7 +23,7 @@ import iemonIcon  from '../images/chars-icons/iemon.svg'
 import kira from '../images/chars/kira.svg'
 import kiraIcon  from '../images/chars-icons/kira.svg'
 import barou from '../images/chars/barou.svg'
-// import barouIcon  from '../images/chars-icons/barou.svg'
+import barouIcon  from '../images/chars-icons/barou.svg'
 import sae from '../images/chars/sae.svg'
 import saeIcon  from '../images/chars-icons/sae.svg'
 import kaiser from '../images/chars/kaiser.svg'
@@ -216,7 +216,7 @@ export const characterList = [
    {
       id: 13,
       image: barou,
-      icon: barou ,
+      icon: barouIcon ,
       name: 'Barou Shoei',
       stats: {
          total: 92,
