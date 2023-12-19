@@ -1,20 +1,22 @@
 type buttonProps = {
-   children: string
-   onClick: any
+   children: any
+   onClick?: any
 }
 
 export function ButtonDnd({children, onClick}: buttonProps) {
    return (
       <button 
-         onClick={onClick} 
+         onClick={onClick}
          className="
+            flex
+            justify-center
+            items-center
             bg-color1
             rounded-md
-            px-[7px]
-            py-[4px]
             w-[85px]
             h-[52px]
-            active:bg-color3
+            active:bg-[#C3D2E5]
+            hover:bg-color3
             transition
             font-roboto 
             text-[20px] 

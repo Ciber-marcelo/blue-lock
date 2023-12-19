@@ -6,6 +6,10 @@
   body {
     @apply bg-white text-black
   }
+  /* estou utilizando "inline-block" nas imagens para resovler um bug visual da lib "html2canvas" */
+  img {
+    @apply inline-block;
+  }
 }
 
 .container {

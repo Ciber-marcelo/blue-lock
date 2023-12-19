@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { DndContext, DragOverlay } from "@dnd-kit/core"
 import { characterList } from "../../../public/jsons/characterList"
 import { DroppableItem } from './droppable-item';
@@ -10,6 +10,8 @@ import { Loading } from '../loading';
 import { ButtonDnd } from './button-dnd';
 import { Card } from './card';
 import { DisabledItem } from './disabled-item';
+import html2canvas from 'html2canvas';
+import { IoMdDownload } from "react-icons/io";
 
 export default function FormationMenu() {
    const [dropp, setDropp] = useState<any>(['', '', '', '', '', '', '', '', '', '', '']);
@@ -17,6 +19,8 @@ export default function FormationMenu() {
    const [activeDrag, setActiveDrag] = useState(null);
    const [search, setSearch] = useState('');
    const [tactic, setTactic] = useState<any>(null);
+   const [loadButton, setLoadButton] = useState(false)
+   const printRef = React.useRef<any>(null);
 
    useEffect(() => {
       const draggables = (
@@ -97,7 +101,6 @@ export default function FormationMenu() {
    function handleDragStart(event: any) {
       setActiveDrag(event.active.id);
       const copyDropp = [...dropp];
-      const copyDragg = [...dragg];
 
       //seto o "dropp" como "vazio" quando retiro o "dragg" dentro dele(presisa fazer isso para corrigir um bug visual)
       copyDropp.map((item, i) => (
@@ -152,6 +155,29 @@ export default function FormationMenu() {
       setDragg(copyDragg)
    }
 
+   //para entender melhor a lib "html2cavas" da uma olhada nesse site: "https://www.robinwieruch.de/react-component-to-image/"
+   async function handleDownloadImage() {
+      setLoadButton(true)
+      const element = printRef.current;
+      const canvas = await html2canvas(element);
+
+      const data = canvas.toDataURL('image/jpg');
+      const link = document.createElement('a');
+
+      if (typeof link.download === 'string') {
+         link.href = data;
+         link.download = 'formation.jpg';
+
+         document.body.appendChild(link);
+         link.click();
+         document.body.removeChild(link);
+         setLoadButton(false)
+      } else {
+         window.open(data);
+         setLoadButton(false)
+      }
+   };
+
    return (
       <>
          <div className='container hidden min-[1190px]:flex flex-col gap-8 mt-16'>
@@ -191,14 +217,28 @@ export default function FormationMenu() {
                   </div>
 
                   <div className='flex flex-row-reverse '>
-                     <div className='flex flex-col gap-[5px] bg-color2 rounded-r-md pt-[5px] pr-[5px]'>
-                        <ButtonDnd onClick={() => handleTactic('4-3-3')}>4-3-3</ButtonDnd>
-                        <ButtonDnd onClick={() => handleTactic('4-4-2')}>4-4-2</ButtonDnd>
-                        <ButtonDnd onClick={() => handleTactic('3-5-2')}>3-5-2</ButtonDnd>
-                        <ButtonDnd onClick={() => handleTactic('3-4-2-1')}>3-4-2-1</ButtonDnd>
+                     <div className='flex flex-col justify-between bg-color2 rounded-r-md py-[5px] pr-[5px]'>
+                        <div className='flex flex-col gap-[5px]'>
+                           <ButtonDnd onClick={() => handleTactic('4-3-3')}>4-3-3</ButtonDnd>
+                           <ButtonDnd onClick={() => handleTactic('4-4-2')}>4-4-2</ButtonDnd>
+                           <ButtonDnd onClick={() => handleTactic('3-5-2')}>3-5-2</ButtonDnd>
+                           <ButtonDnd onClick={() => handleTactic('3-4-2-1')}>3-4-2-1</ButtonDnd>
+                        </div>
+
+                        <div>
+                           {loadButton ?
+                              <div className='flexjustify-center items-center bg-color1 rounded-md w-[85px] h-[85px]'> 
+                                 <Loading /> 
+                              </div>
+                              :
+                              <ButtonDnd onClick={handleDownloadImage}>
+                                 <IoMdDownload color='white' size={40} />
+                              </ButtonDnd>
+                           }
+                        </div>
                      </div>
 
-                     <div className='relative flex justify-center items-center w-[900px] h-[660px] bg-fieldBg rounded-l-md select-none'>
+                     <div ref={printRef} className='relative flex justify-center items-center w-[900px] h-[660px] bg-fieldBg rounded-l-md select-none'>
                         {tactic !== null
                            ?
                            dropp.map((item: any, i: number) => (
