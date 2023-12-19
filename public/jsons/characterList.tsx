@@ -34,6 +34,14 @@ import reo from '../images/chars/reo.svg'
 import reoIcon  from '../images/chars-icons/reo.svg'
 import zantetsu from '../images/chars/zantetsu.svg'
 import zantetsuIcon  from '../images/chars-icons/zantetsu.svg'
+import rin from '../images/chars/rin.svg'
+import rinIcon  from '../images/chars-icons/rin.svg'
+import aryu from '../images/chars/aryu.svg'
+import aryuIcon  from '../images/chars-icons/aryu.svg'
+import tokimitsu from '../images/chars/tokimitsu.svg'
+import tokimitsuIcon  from '../images/chars-icons/tokimitsu.svg'
+import shidou from '../images/chars/shidou.svg'
+import shidouIcon  from '../images/chars-icons/shidou.svg'
 import sae from '../images/chars/sae.svg'
 import saeIcon  from '../images/chars-icons/sae.svg'
 import kaiser from '../images/chars/kaiser.svg'
@@ -315,6 +323,66 @@ export const characterList = [
    },
    {
       id: 19,
+      image: rin,
+      icon: rinIcon,
+      name: 'Itoshi Rin',
+      stats: {
+         total: 94,
+         speed: 90,
+         defense: 90,
+         pass: 90,
+         dribble: 90,
+         shoot: 90,
+         offense: 90
+      } 
+   },
+   {
+      id: 20,
+      image: aryu,
+      icon: aryuIcon,
+      name: 'Jyubei Aryu',
+      stats: {
+         total: 80,
+         speed: 74,
+         defense: 90,
+         pass: 68,
+         dribble: 69,
+         shoot: 79,
+         offense: 76
+      } 
+   },
+   {
+      id: 21,
+      image: tokimitsu,
+      icon: tokimitsuIcon,
+      name: 'Aoshi Tokimitsu',
+      stats: {
+         total: 80,
+         speed: 80,
+         defense: 80,
+         pass: 80,
+         dribble: 80,
+         shoot: 80,
+         offense: 80
+      } 
+   },
+   {
+      id: 22,
+      image: shidou,
+      icon: shidouIcon,
+      name: 'Ryusei Shidou',
+      stats: {
+         total: 93,
+         speed: 90,
+         defense: 90,
+         pass: 90,
+         dribble: 90,
+         shoot: 90,
+         offense: 90
+      } 
+   },
+   {
+      id: 23,
       image: sae,
       icon: saeIcon ,
       name: 'Itoshi Sae',
@@ -329,7 +397,7 @@ export const characterList = [
       } 
    },
    {
-      id: 20,
+      id: 24,
       image: kaiser,
       icon: kaiserIcon ,
       name: 'Michael Kaiser',
@@ -344,7 +412,7 @@ export const characterList = [
       } 
    },
    {
-      id: 21,
+      id: 25,
       image: lorenzo,
       icon: lorenzoIcon ,
       name: 'Don Lorenzo',
