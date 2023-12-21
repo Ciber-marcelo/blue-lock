@@ -19,7 +19,7 @@ export default function FormationMenu() {
    const [activeDrag, setActiveDrag] = useState(null);
    const [search, setSearch] = useState('');
    const [tactic, setTactic] = useState<any>(null);
-   const [loadButton, setLoadButton] = useState(false)
+   const [disabledButton, setDisabledButton] = useState(false)
    const printRef = React.useRef<any>(null);
 
    useEffect(() => {
@@ -157,7 +157,7 @@ export default function FormationMenu() {
 
    //para entender melhor a lib "html2cavas" da uma olhada nesse site: "https://www.robinwieruch.de/react-component-to-image/"
    async function handleDownloadImage() {
-      setLoadButton(true)
+      setDisabledButton(true)
       const element = printRef.current;
       const canvas = await html2canvas(element);
 
@@ -171,10 +171,10 @@ export default function FormationMenu() {
          document.body.appendChild(link);
          link.click();
          document.body.removeChild(link);
-         setLoadButton(false)
+         setDisabledButton(false)
       } else {
          window.open(data);
-         setLoadButton(false)
+         setDisabledButton(false)
       }
    };
 
@@ -225,17 +225,9 @@ export default function FormationMenu() {
                            <ButtonDnd onClick={() => handleTactic('3-4-2-1')}>3-4-2-1</ButtonDnd>
                         </div>
 
-                        <div>
-                           {loadButton ?
-                              <div className='flexjustify-center items-center bg-color1 rounded-md w-[85px] h-[85px]'> 
-                                 <Loading /> 
-                              </div>
-                              :
-                              <ButtonDnd onClick={handleDownloadImage}>
-                                 <IoMdDownload color='white' size={40} />
-                              </ButtonDnd>
-                           }
-                        </div>
+                        <ButtonDnd onClick={handleDownloadImage} disabled={disabledButton}>
+                           <IoMdDownload color='white' size={40} />
+                        </ButtonDnd>
                      </div>
 
                      <div ref={printRef} className='relative flex justify-center items-center w-[900px] h-[660px] bg-fieldBg rounded-l-md select-none'>
