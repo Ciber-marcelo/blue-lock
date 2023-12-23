@@ -42,13 +42,26 @@ import tokimitsu from '../images/chars/tokimitsu.svg'
 import tokimitsuIcon  from '../images/chars-icons/tokimitsu.svg'
 import shidou from '../images/chars/shidou.svg'
 import shidouIcon  from '../images/chars-icons/shidou.svg'
+import karasu from '../images/chars/karasu.svg'
+import karasuIcon  from '../images/chars-icons/karasu.svg'
+import otoya from '../images/chars/otoya.svg'
+import otoyaIcon  from '../images/chars-icons/otoya.svg'
+import yukimiya from '../images/chars/yukimiya.svg'
+import yukimiyaIcon  from '../images/chars-icons/yukimiya.svg'
+import hiori from '../images/chars/hiori.svg'
+import hioriIcon  from '../images/chars-icons/hiori.svg'
+import nanase from '../images/chars/nanase.svg'
+import nanaseIcon  from '../images/chars-icons/nanase.svg'
+import aiku from '../images/chars/aiku.svg'
+import aikuIcon  from '../images/chars-icons/aiku.svg'
+import sendo from '../images/chars/sendo.svg'
+import sendoIcon  from '../images/chars-icons/sendo.svg'
 import sae from '../images/chars/sae.svg'
 import saeIcon  from '../images/chars-icons/sae.svg'
 import kaiser from '../images/chars/kaiser.svg'
 import kaiserIcon  from '../images/chars-icons/kaiser.svg'
 import lorenzo from '../images/chars/lorenzo.svg'
 import lorenzoIcon  from '../images/chars-icons/lorenzo.svg'
-
 
 export const characterList = [
    {
@@ -175,7 +188,7 @@ export const characterList = [
       image: zantetsu,
       icon: zantetsuIcon,
       name: 'Tsurugi Zantetsu',
-      stats: {total: 70, speed: 70, defense: 70, pass: 70, dribble: 70, shoot: 70, offense: 70} 
+      stats: {total: 80, speed: 80, defense: 80, pass: 80, dribble: 80, shoot: 80, offense: 80} 
    },
    {
       id: 19,
@@ -207,20 +220,69 @@ export const characterList = [
    },
    {
       id: 23,
+      image: karasu,
+      icon: karasuIcon,
+      name: 'Tabito Karasu',
+      stats: {total: 84, speed: 84, defense: 84, pass: 84, dribble: 84, shoot: 84, offense: 84} 
+   },
+   {
+      id: 24,
+      image: otoya,
+      icon: otoyaIcon,
+      name: 'Eita Otoya',
+      stats: {total: 83, speed: 83, defense: 83, pass: 83, dribble: 83, shoot: 83, offense: 83} 
+   },
+   {
+      id: 25,
+      image: yukimiya,
+      icon: yukimiyaIcon,
+      name: 'Kenyu Yukimiya',
+      stats: {total: 84, speed: 89, defense: 76, pass: 77, dribble: 91, shoot: 86, offense: 88} 
+   },
+   {
+      id: 26,
+      image: hiori,
+      icon: hioriIcon,
+      name: 'Yo Hiori',
+      stats: {total: 80, speed: 80, defense: 80, pass: 80, dribble: 80, shoot: 80, offense: 80} 
+   },
+   {
+      id: 27,
+      image: nanase,
+      icon: nanaseIcon,
+      name: 'Nijiro Nanase',
+      stats: {total: 80, speed: 80, defense: 80, pass: 80, dribble: 80, shoot: 80, offense: 80} 
+   },
+   {
+      id: 28,
+      image: aiku,
+      icon: aikuIcon,
+      name: 'Oliver Aiku',
+      stats: {total: 85, speed: 81, defense: 93, pass: 83, dribble: 76, shoot: 77, offense: 72} 
+   },
+   {
+      id: 29,
+      image: sendo,
+      icon: sendoIcon,
+      name: 'Shuto Sendo',
+      stats: {total: 81, speed: 82, defense: 73, pass: 76, dribble: 77, shoot: 83, offense: 84} 
+   },
+   {
+      id: 30,
       image: sae,
       icon: saeIcon ,
       name: 'Itoshi Sae',
       stats: {total: 98, speed: 85, defense: 72, pass: 98, dribble: 95, shoot: 88, offense: 90} 
    },
    {
-      id: 24,
+      id: 31,
       image: kaiser,
       icon: kaiserIcon ,
       name: 'Michael Kaiser',
       stats: {total: 98, speed: 91, defense: 74, pass: 81, dribble: 86, shoot: 98, offense: 96} 
    },
    {
-      id: 25,
+      id: 32,
       image: lorenzo,
       icon: lorenzoIcon ,
       name: 'Don Lorenzo',
