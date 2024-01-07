@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export function Card() {
    return (
       <div
@@ -19,8 +21,10 @@ export function Card() {
             gap-8
          '
       >
-         <p>The formation page is not supported on mobile devices.</p>
-         <p>Back to Characters page</p>
+         <p>The formations page is not supported on mobile devices or on screens smaller than 1200px.</p>
+         <Link href={'/'}>
+            <p className=" hover:text-color3 transition-all">Back to Characters page</p>
+         </Link>
       </div>
    );
 }

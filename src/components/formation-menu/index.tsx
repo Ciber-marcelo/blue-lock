@@ -84,15 +84,15 @@ export default function FormationMenu() {
       } else {
          setTactic([
             'bottom-[10px] left-[400px]',
-            'bottom-[140px] left-[400px]',
-            'bottom-[140px] left-[250px]',
-            'bottom-[140px] left-[550px]',
-            'bottom-[270px] left-[280px]',
-            'bottom-[270px] left-[520px]',
-            'bottom-[270px] left-[60px]',
-            'bottom-[270px] left-[740px]',
-            'bottom-[410px] left-[550px]',
-            'bottom-[410px] left-[250px]',
+            'bottom-[150px] left-[400px]',
+            'bottom-[150px] left-[250px]',
+            'bottom-[150px] left-[550px]',
+            'bottom-[290px] left-[280px]',
+            'bottom-[290px] left-[520px]',
+            'bottom-[320px] left-[60px]',
+            'bottom-[320px] left-[740px]',
+            'bottom-[440px] left-[570px]',
+            'bottom-[440px] left-[230px]',
             'bottom-[530px] left-[400px]',
          ])
       }
