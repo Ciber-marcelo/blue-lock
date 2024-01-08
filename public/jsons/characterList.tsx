@@ -64,8 +64,12 @@ import sae from '../images/chars/sae.svg'
 import saeIcon  from '../images/chars-icons/sae.svg'
 import kaiser from '../images/chars/kaiser.svg'
 import kaiserIcon  from '../images/chars-icons/kaiser.svg'
+import ness from '../images/chars/ness.svg'
+import nessIcon  from '../images/chars-icons/ness.svg'
 import lorenzo from '../images/chars/lorenzo.svg'
 import lorenzoIcon  from '../images/chars-icons/lorenzo.svg'
+import charles from '../images/chars/charles.svg'
+import charlesIcon  from '../images/chars-icons/charles.svg'
 
 export const characterList = [
    {
@@ -227,7 +231,7 @@ export const characterList = [
       image: otoya,
       icon: otoyaIcon,
       name: 'Eita Otoya',
-      stats: {total: 83, speed: 83, defense: 83, pass: 83, dribble: 83, shoot: 83, offense: 83} 
+      stats: {total: 84, speed: 91, defense: 72, pass: 83, dribble: 84, shoot: 87, offense: 89} 
    },
    {
       id: 24,
@@ -301,9 +305,23 @@ export const characterList = [
    },
    {
       id: 34,
+      image: ness,
+      icon: nessIcon ,
+      name: 'Alexis Ness',
+      stats: {total: 93, speed: 76, defense: 71, pass: 97, dribble: 90, shoot: 78, offense: 94} 
+   },
+   {
+      id: 35,
       image: lorenzo,
       icon: lorenzoIcon ,
       name: 'Don Lorenzo',
       stats: {total: 96, speed: 83, defense: 99, pass: 87, dribble: 93, shoot: 82, offense: 84} 
+   },
+   {
+      id: 36,
+      image: charles,
+      icon: charlesIcon,
+      name: 'Charles Chevalier',
+      stats: {total: 90, speed: 90, defense: 90, pass: 90, dribble: 90, shoot: 90, offense: 90} 
    },
 ];
