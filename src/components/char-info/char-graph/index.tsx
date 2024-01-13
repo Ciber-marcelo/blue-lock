@@ -104,7 +104,7 @@ export default function CharGraph({ name, speed, defense, pass, dribble, shoot, 
          }
 
          <div className='flex w-full pl-1 font-roboto text-gray-400 text-[10px]'>
-            The informations was taken from the Blue Lock manga (up to ch.233).
+            The informations was taken from the Blue Lock manga (up to ch.246).
          </div>
       </div>
    )

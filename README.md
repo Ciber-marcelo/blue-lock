@@ -19,13 +19,14 @@ Criei as páginas do projeto no figma para referência: [figma](https://www.figm
 
 ## Tecnologias utilizadas
 
-O projeto foi feito utilizando das seguintes tecnologias:
+O projeto foi feito utilizando as seguintes tecnologias:
 
 - Next JS
 - Typescript
 - Tailwind CSS
 - React-apex-charts
 - dnd-kit/core
+- html2canvas
 
 Instruções:
 
@@ -45,7 +46,9 @@ Instruções:
 
 - Visualização dos statos dos personagem com a biblioteca react-apex-charts
 
-- Criação de formações de futebol utilizando a biblioteca dnd-kit/core (Em construção) 
+- Criação de formações de futebol utilizando a biblioteca dnd-kit/core
+
+- Opção de baixar imagens das formações criadas utilizando a biblioteca html2canvas.
 
 ---
 
