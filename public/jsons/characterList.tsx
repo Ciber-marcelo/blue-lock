@@ -322,6 +322,6 @@ export const characterList = [
       image: charles,
       icon: charlesIcon,
       name: 'Charles Chevalier',
-      stats: {total: 90, speed: 90, defense: 90, pass: 90, dribble: 90, shoot: 90, offense: 90} 
+      stats: {total: 93, speed: 84, defense: 77, pass: 97, dribble: 89, shoot: 88, offense: 92} 
    },
 ];
