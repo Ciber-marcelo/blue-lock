@@ -119,42 +119,42 @@ export const characterList = [
       image: igarashi,
       icon: igarashiIcon ,
       name: ' Gurimu Igarashi',
-      stats: {total: 78, speed: 74, defense: 72, pass: 74, dribble: 65, shoot: 72, offense: 78} 
+      stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
    },
    {
       id: 8,
       image: kuon,
       icon: kuonIcon ,
       name: 'Wataru Kuon',
-      stats: {total: 72, speed: 69, defense: 70, pass: 68, dribble: 64, shoot: 69, offense: 74} 
+      stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
    },
    {
       id: 9,
       image: naruhaya,
       icon: naruhayaIcon ,
       name: 'Asahi Naruhaya',
-      stats: {total: 69, speed: 70, defense: 67, pass: 69, dribble: 69, shoot: 61, offense: 70} 
+      stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
    },
    {
       id: 10,
       image: imamura,
       icon: imamuraIcon ,
       name: 'Yudai Imamura',
-      stats: {total: 67, speed: 67, defense: 63, pass: 71, dribble: 68, shoot: 66, offense: 67} 
+      stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
    },
    {
       id: 11,
       image: iemon,
       icon: iemonIcon ,
       name: 'Okuhita Iemon',
-      stats: {total: 68, speed: 66, defense: 75, pass: 69, dribble: 65, shoot: 69, offense: 69} 
+      stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
    },
    {
       id: 12,
       image: kira,
       icon: kiraIcon ,
       name: 'Ryosuke Kira',
-      stats: {total: 75, speed: 72, defense: 68, pass: 73, dribble: 68, shoot: 72, offense: 74} 
+      stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
    },
    {
       id: 13,
@@ -175,7 +175,7 @@ export const characterList = [
       image: junichi,
       icon: junichiIcon,
       name: 'Wanima Junichi',
-      stats: {total: 30, speed: 30, defense: 30, pass: 30, dribble: 30, shoot: 30, offense: 30} 
+      stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
    },
    {
       id: 16,
@@ -196,14 +196,14 @@ export const characterList = [
       image: zantetsu,
       icon: zantetsuIcon,
       name: 'Tsurugi Zantetsu',
-      stats: {total: 80, speed: 80, defense: 80, pass: 80, dribble: 80, shoot: 80, offense: 80} 
+      stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
    },
    {
       id: 19,
       image: rin,
       icon: rinIcon,
       name: 'Itoshi Rin',
-      stats: {total: 94, speed: 90, defense: 90, pass: 90, dribble: 90, shoot: 90, offense: 90} 
+      stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
    },
    {
       id: 20,
@@ -217,21 +217,21 @@ export const characterList = [
       image: tokimitsu,
       icon: tokimitsuIcon,
       name: 'Aoshi Tokimitsu',
-      stats: {total: 80, speed: 80, defense: 80, pass: 80, dribble: 80, shoot: 80, offense: 80} 
+      stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
    },
    {
       id: 22,
       image: karasu,
       icon: karasuIcon,
       name: 'Tabito Karasu',
-      stats: {total: 84, speed: 84, defense: 84, pass: 84, dribble: 84, shoot: 84, offense: 84} 
+      stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
    },
    {
       id: 23,
       image: otoya,
       icon: otoyaIcon,
       name: 'Eita Otoya',
-      stats: {total: 84, speed: 91, defense: 72, pass: 83, dribble: 84, shoot: 87, offense: 89} 
+      stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
    },
    {
       id: 24,
@@ -245,14 +245,14 @@ export const characterList = [
       image: hiori,
       icon: hioriIcon,
       name: 'Yo Hiori',
-      stats: {total: 80, speed: 80, defense: 80, pass: 80, dribble: 80, shoot: 80, offense: 80} 
+      stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
    },
    {
       id: 26,
       image: nanase,
       icon: nanaseIcon,
       name: 'Nijiro Nanase',
-      stats: {total: 80, speed: 80, defense: 80, pass: 80, dribble: 80, shoot: 80, offense: 80} 
+      stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
    },
    {
       id: 27,
@@ -273,7 +273,7 @@ export const characterList = [
       image: shidou,
       icon: shidouIcon,
       name: 'Ryusei Shidou',
-      stats: {total: 93, speed: 90, defense: 90, pass: 90, dribble: 90, shoot: 90, offense: 90} 
+      stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
    },
    {
       id: 30,
