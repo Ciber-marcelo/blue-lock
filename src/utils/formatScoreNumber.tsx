@@ -20,7 +20,10 @@ export function formatScoreNumber(score: number) {
   else if (score >= 30) {
     return "F"
   }
-  else {
+  else if (score >= 1) {
     return "G"
+  }
+  else {
+    return "?"
   }
 }

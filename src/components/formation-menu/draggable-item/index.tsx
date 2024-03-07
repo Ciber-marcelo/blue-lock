@@ -49,7 +49,7 @@ export function DraggableItem({id, image, name, rating}: draggItemProps) {
             text-white 
             font-bold
          ">
-         {rating}
+         {rating !== 0 ? rating : '?'}
          </div>
          <Image
             width={160}
