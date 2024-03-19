@@ -294,7 +294,7 @@ export const characterList = [
       image: sae,
       icon: saeIcon ,
       name: 'Itoshi Sae',
-      stats: {total: 98, speed: 85, defense: 72, pass: 98, dribble: 95, shoot: 88, offense: 90} 
+      stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
    },
    {
       id: 33,
