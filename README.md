@@ -1,4 +1,4 @@
-<img alt="Logo" src="https://cdn.discordapp.com/attachments/794432010441064468/1173851499349147658/image.png?ex=65f91d66&is=65e6a866&hm=79d0fe288b94250dbf379d09fce54fb24c99c369f0fea1db301741386e2111c6&" width="100%">
+<img alt="Logo" src="https://cdn.discordapp.com/attachments/794432010441064468/1173851499349147658/image.png?ex=660b9266&is=65f91d66&hm=d98c30da9d06ec0db3342908ea5b1a5b4d8f98126b4275a5edf6a2979d8916a0&" width="100%">
 
 ## Indice
 
@@ -44,7 +44,7 @@ Instruções:
 
 - Listagem de personagens e barra de pesquisa por nome
 
-- Visualização dos statos dos personagem com a biblioteca react-apex-charts
+- Visualização dos status dos personagem com a biblioteca react-apex-charts
 
 - Criação de formações de futebol utilizando a biblioteca dnd-kit/core
 
