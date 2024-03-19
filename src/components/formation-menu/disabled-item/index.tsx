@@ -34,7 +34,7 @@ export function DisabledItem({ image, name, rating }: disabledProps) {
             font-bold
             select-none
          ">
-            {rating}
+            {rating >= 10 ? rating : '?'}
          </div>
          <Image
             width={160}
