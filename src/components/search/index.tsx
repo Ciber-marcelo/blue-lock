@@ -18,7 +18,7 @@ export default function SearchCharItem({ onChange }: SearchProps) {
             bg-color1
             text-white
             placeholder:text-white
-             placeholder:font-normal
+            placeholder:font-normal
             focus:outline-none
             font-roboto 
             font-bold

@@ -6,7 +6,7 @@ import { CharProvider } from "@/contexts/char-context";
 
 export default function Home() {
   return (
-    <div >
+    <div className="flex flex-col min-h-screen justify-center">
       <CharProvider>
         <CharList />
         <CharInfo />

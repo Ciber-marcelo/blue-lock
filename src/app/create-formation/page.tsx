@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function CreateFormation() {
    return (
-      <div>
+      <div className="flex flex-col min-h-screen justify-center">
          <FormationMenu />
       </div>
    )
