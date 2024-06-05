@@ -1,7 +1,6 @@
 //da uma olhada no video para entender melhor o "react context", link: https://www.youtube.com/watch?v=06_575UN55A&t=231s
 import { createContext, useState } from "react";
-import isagi from '../../public/images/chars/isagi.svg'
-import isagiIcon  from '../../public/images/chars-icons/isagi.svg'
+import { characterList } from "../../public/jsons/characterList";
 
 export type CharacterProps = {
    id: number
@@ -27,21 +26,7 @@ type CharContextProps = {
 export const CharContext = createContext<CharContextProps>({} as CharContextProps);
 
 export const CharProvider = ({ children }: { children: React.ReactNode }) => {
-   const [char, setChar] = useState<CharacterProps>({
-      id: 1,
-      image: isagi,
-      icon: isagiIcon ,
-      name: 'Isagi Yoichi',
-      stats: {
-         total:88,
-         speed: 77,
-         defense: 75,
-         pass: 78,
-         dribble: 70,
-         shoot: 82,
-         offense: 94
-      }
-   } as CharacterProps)
+   const [char, setChar] = useState<CharacterProps>(characterList[0])
 
    function selectedChar(item: CharacterProps) {
       setChar(item)
