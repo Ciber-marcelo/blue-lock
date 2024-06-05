@@ -36,6 +36,7 @@ export default function CharItem({ image, name, onClick }: charItemProps) {
             src={image}
             alt='Character image'
             draggable={false}
+            priority={true} //evita um erro no console
          />
          <div className="h-[30px] bg-color2 flex justify-center pt-[10px] font-roboto text-xs text-white font-bold uppercase">
             {name}
