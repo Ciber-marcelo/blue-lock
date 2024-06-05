@@ -6,7 +6,7 @@ export default function Footer() {
     <div className="flex justify-center bg-color1 py-8 px-6 mt-16">
       <a href="https://github.com/Ciber-marcelo/blue-lock" target='blank' className="flex">
         <Image
-          className='w-12 h-12 bg-color1 border-4 border-color2 rounded-s-md p-1'
+          className='w-12 h-12 bg-color2 border-4 border-color2 rounded-s-md p-1'
           width={30}
           height={30}
           src='/images/M.svg'
