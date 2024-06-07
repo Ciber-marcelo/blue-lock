@@ -4,7 +4,7 @@ type SearchProps = {
    onChange: any
 }
 
-export default function SearchCharItem({ onChange }: SearchProps) {
+export default function Search({ onChange }: SearchProps) {
    return (
       <div className='flex items-center px-4 bg-color1  max-w-[400px] rounded-md'>
          <FaSearch size={20} color='white'/>

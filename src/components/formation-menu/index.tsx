@@ -5,7 +5,7 @@ import { DndContext, DragOverlay } from "@dnd-kit/core"
 import { characterList } from "../../../public/jsons/characterList"
 import { DroppableItem } from './droppable-item';
 import { DraggableItem } from "./draggable-item";
-import SearchCharItem from '../search';
+import Search from '../search';
 import { Loading } from '../loading';
 import { ButtonDnd } from './button-dnd';
 import { Card } from './card';
@@ -195,7 +195,7 @@ export default function FormationMenu() {
                   }
                </DragOverlay>
 
-               <SearchCharItem onChange={(e: any) => setSearch(e.target.value.toUpperCase())} />
+               <Search onChange={(e: any) => setSearch(e.target.value.toUpperCase())} />
 
                <div className='flex justify-between'>
                   <div className='overflow-y-auto overflow-x-hidden scrollbar flex flex-col pr-2 gap-2 h-[660px]'>
@@ -216,20 +216,7 @@ export default function FormationMenu() {
                      ))}
                   </div>
 
-                  <div className='flex flex-row-reverse '>
-                     <div className='flex flex-col justify-between bg-color2 rounded-r-md py-[5px] pr-[5px]'>
-                        <div className='flex flex-col gap-[5px]'>
-                           <ButtonDnd onClick={() => handleTactic('4-3-3')}>4-3-3</ButtonDnd>
-                           <ButtonDnd onClick={() => handleTactic('4-4-2')}>4-4-2</ButtonDnd>
-                           <ButtonDnd onClick={() => handleTactic('3-5-2')}>3-5-2</ButtonDnd>
-                           <ButtonDnd onClick={() => handleTactic('3-4-2-1')}>3-4-2-1</ButtonDnd>
-                        </div>
-
-                        <ButtonDnd onClick={handleDownloadImage} disabled={disabledButton}>
-                           <IoMdDownload color='white' size={40} />
-                        </ButtonDnd>
-                     </div>
-
+                  <div className='flex'>
                      <div ref={printRef} className='relative flex justify-center items-center w-[900px] h-[660px] bg-fieldBg rounded-l-md select-none'>
                         {tactic !== null
                            ?
@@ -249,6 +236,19 @@ export default function FormationMenu() {
                            :
                            <Loading />
                         }
+                     </div>
+
+                     <div className='flex flex-col justify-between bg-color2 rounded-r-md py-[5px] pr-[5px]'>
+                        <div className='flex flex-col gap-[5px]'>
+                           <ButtonDnd onClick={() => handleTactic('4-3-3')}>4-3-3</ButtonDnd>
+                           <ButtonDnd onClick={() => handleTactic('4-4-2')}>4-4-2</ButtonDnd>
+                           <ButtonDnd onClick={() => handleTactic('3-5-2')}>3-5-2</ButtonDnd>
+                           <ButtonDnd onClick={() => handleTactic('3-4-2-1')}>3-4-2-1</ButtonDnd>
+                        </div>
+
+                        <ButtonDnd onClick={handleDownloadImage} disabled={disabledButton}>
+                           <IoMdDownload color='white' size={40} />
+                        </ButtonDnd>
                      </div>
                   </div>
                </div>

@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { CharContext } from "@/contexts/char-context";
-
 import Image from "next/image";
 
 type charItemProps = {
