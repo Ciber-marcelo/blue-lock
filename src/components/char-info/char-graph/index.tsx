@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { CharContext } from "@/contexts/char-context";
-import { Loading } from '@/components/loading';
 import dynamic from 'next/dynamic'
 
 // estou usando o "dynamic" para importar e resolver um problema da biblioteca "react-apexcharts"
@@ -8,7 +7,7 @@ const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 export default function CharGraph() {
    const { char } = useContext(CharContext);
-   
+
    const optionsGraph = {
       xaxis: {
          categories: ['SPEED', 'DEFENSE', 'PASS', 'DRIBBLE', 'SHOOT', 'OFFENSE'],
@@ -73,11 +72,11 @@ export default function CharGraph() {
    const seriesGraph = [{
       name: "series-1",
       data: [
-         char.stats.speed, 
-         char.stats.defense, 
-         char.stats.pass, 
-         char.stats.dribble, 
-         char.stats.shoot, 
+         char.stats.speed,
+         char.stats.defense,
+         char.stats.pass,
+         char.stats.dribble,
+         char.stats.shoot,
          char.stats.offense
       ]
    }]
@@ -88,18 +87,14 @@ export default function CharGraph() {
             {char.name} Graph
          </div>
 
-         {char ?
-            <Chart
-               className='w-full pl-4 pt-6'
-               options={optionsGraph}
-               series={seriesGraph}
-               type="radar"
-               width={'100%'}
-               height={'auto'}
-            />
-            :
-            <Loading />
-         }
+         <Chart
+            className='w-full pl-4 pt-6'
+            options={optionsGraph}
+            series={seriesGraph}
+            type="radar"
+            width={'100%'}
+            height={'auto'}
+         />
 
          <div className='flex w-full pl-1 font-roboto text-gray-400 text-[10px]'>
             The informations was taken from the Blue Lock manga (up to chapter 254).
