@@ -121,41 +121,41 @@ export const characterList = [
       name: ' Gurimu Igarashi',
       stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
    },
-   {
-      id: 8,
-      image: kuon,
-      icon: kuonIcon ,
-      name: 'Wataru Kuon',
-      stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
-   },
-   {
-      id: 9,
-      image: naruhaya,
-      icon: naruhayaIcon ,
-      name: 'Asahi Naruhaya',
-      stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
-   },
-   {
-      id: 10,
-      image: imamura,
-      icon: imamuraIcon ,
-      name: 'Yudai Imamura',
-      stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
-   },
-   {
-      id: 11,
-      image: iemon,
-      icon: iemonIcon ,
-      name: 'Okuhita Iemon',
-      stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
-   },
-   {
-      id: 12,
-      image: kira,
-      icon: kiraIcon ,
-      name: 'Ryosuke Kira',
-      stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
-   },
+   // {
+   //    id: 8,
+   //    image: kuon,
+   //    icon: kuonIcon ,
+   //    name: 'Wataru Kuon',
+   //    stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
+   // },
+   // {
+   //    id: 9,
+   //    image: naruhaya,
+   //    icon: naruhayaIcon ,
+   //    name: 'Asahi Naruhaya',
+   //    stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
+   // },
+   // {
+   //    id: 10,
+   //    image: imamura,
+   //    icon: imamuraIcon ,
+   //    name: 'Yudai Imamura',
+   //    stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
+   // },
+   // {
+   //    id: 11,
+   //    image: iemon,
+   //    icon: iemonIcon ,
+   //    name: 'Okuhita Iemon',
+   //    stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
+   // },
+   // {
+   //    id: 12,
+   //    image: kira,
+   //    icon: kiraIcon ,
+   //    name: 'Ryosuke Kira',
+   //    stats: {total: 0, speed: 0, defense: 0, pass: 0, dribble: 0, shoot: 0, offense: 0} 
+   // },
    {
       id: 13,
       image: barou,

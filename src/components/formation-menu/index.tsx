@@ -29,9 +29,9 @@ export default function FormationMenu() {
 
    function clear() {
       const draggables = (
-         characterList.map((item) => (
+         characterList.map((item, i) => (
             {
-               id: item.id,
+               id: i + 1,
                image: item.icon,
                name: item.name,
                rating: item.stats.total,
