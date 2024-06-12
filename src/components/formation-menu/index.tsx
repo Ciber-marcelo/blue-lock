@@ -14,11 +14,12 @@ import html2canvas from 'html2canvas';
 import { IoMdDownload, IoMdClose } from "react-icons/io";
 
 export default function FormationMenu() {
-   const [dropp, setDropp] = useState<any>(['', '', '', '', '', '', '', '', '', '', '']);
+   const [dropp, setDropp] = useState<any>([]);
    const [dragg, setDragg] = useState<any>([]);
    const [activeDrag, setActiveDrag] = useState(null);
    const [search, setSearch] = useState('');
    const [tactic, setTactic] = useState<any>(null);
+   const [buttonActive, setButtonActive] = useState('')
    const [disabledButton, setDisabledButton] = useState(false)
    const printRef = React.useRef<any>(null);
 
@@ -41,6 +42,7 @@ export default function FormationMenu() {
       );
       setDragg(draggables)
       setDropp(['', '', '', '', '', '', '', '', '', '', ''])
+      setButtonActive('4-4-2')
    }
 
    function handleTactic(f: string) {
@@ -58,6 +60,7 @@ export default function FormationMenu() {
             'bottom-[530px] left-[550px]',
             'bottom-[530px] left-[250px]',
          ])
+         setButtonActive('4-4-2')
       } else if (f === '4-3-3') {
          setTactic([
             'bottom-[10px] left-[400px]',
@@ -72,6 +75,7 @@ export default function FormationMenu() {
             'bottom-[500px] left-[760px]',
             'bottom-[530px] left-[400px]',
          ])
+         setButtonActive('4-3-3')
       } else if (f === '3-4-3') {
          setTactic([
             'bottom-[10px] left-[400px]',
@@ -86,6 +90,7 @@ export default function FormationMenu() {
             'bottom-[470px] left-[580px]',
             'bottom-[530px] left-[400px]',
          ])
+         setButtonActive('3-4-3')
       } else if (f === '3-5-1-1') {
          setTactic([
             'bottom-[10px] left-[400px]',
@@ -100,6 +105,7 @@ export default function FormationMenu() {
             'bottom-[400px] left-[400px]',
             'bottom-[530px] left-[400px]',
          ])
+         setButtonActive('3-5-1-1')
       } else if (f === '3-4-1-2') {
          setTactic([
             'bottom-[10px] left-[400px]',
@@ -114,6 +120,7 @@ export default function FormationMenu() {
             'bottom-[530px] left-[550px]',
             'bottom-[530px] left-[250px]',
          ])
+         setButtonActive('3-4-1-2')
       }
    }
 
@@ -260,18 +267,18 @@ export default function FormationMenu() {
 
                      <div className='flex flex-col justify-between bg-color2 rounded-r-md py-[5px] pr-[5px]'>
                         <div className='flex flex-col gap-[5px]'>
-                           <ButtonDnd onClick={() => handleTactic('4-4-2')} subText='Bastard'>4-4-2</ButtonDnd>
-                           <ButtonDnd onClick={() => handleTactic('4-3-3')} subText='Barcha'>4-3-3</ButtonDnd>
-                           <ButtonDnd onClick={() => handleTactic('3-4-3')} subText='Manshine'>3-4-3</ButtonDnd>
-                           <ButtonDnd onClick={() => handleTactic('3-5-1-1')} subText='Ubers'>3-5-1-1</ButtonDnd>
-                           <ButtonDnd onClick={() => handleTactic('3-4-1-2')} subText='PXG'>3-4-1-2</ButtonDnd>
+                           <ButtonDnd onClick={() => handleTactic('4-4-2')} css={(buttonActive === '4-4-2' && 'bg-color2 border-color1 border-2')} subText='Bastard'>4-4-2</ButtonDnd>
+                           <ButtonDnd onClick={() => handleTactic('4-3-3')} css={(buttonActive === '4-3-3' && 'bg-color2 border-color1 border-2')} subText='Barcha'>4-3-3</ButtonDnd>
+                           <ButtonDnd onClick={() => handleTactic('3-4-3')} css={(buttonActive === '3-4-3' && 'bg-color2 border-color1 border-2')} subText='Manshine'>3-4-3</ButtonDnd>
+                           <ButtonDnd onClick={() => handleTactic('3-5-1-1')} css={(buttonActive === '3-5-1-1' && 'bg-color2 border-color1 border-2')} subText='Ubers'>3-5-1-1</ButtonDnd>
+                           <ButtonDnd onClick={() => handleTactic('3-4-1-2')} css={(buttonActive === '3-4-1-2' && 'bg-color2 border-color1 border-2')} subText='PXG'>3-4-1-2</ButtonDnd>
                         </div>
 
                         <div className='flex flex-col gap-[5px]'>
-                           <ButtonDnd onClick={() => clear()} color='bg-red-500'>
+                           <ButtonDnd onClick={() => clear()} css='bg-red-500'>
                               <IoMdClose color='white' size={40} />
                            </ButtonDnd>
-                           <ButtonDnd onClick={handleDownloadImage} color='bg-green-500' disabled={disabledButton}>
+                           <ButtonDnd onClick={handleDownloadImage} css='bg-green-500' disabled={disabledButton}>
                               <IoMdDownload color='white' size={40} />
                            </ButtonDnd>
                         </div>

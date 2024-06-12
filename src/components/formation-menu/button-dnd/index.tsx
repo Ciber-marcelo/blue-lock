@@ -2,11 +2,11 @@ type buttonProps = {
    children: any
    subText?: string
    onClick?: any
-   color?: string
+   css?: string | boolean
    disabled?: boolean
 }
 
-export function ButtonDnd({ children, subText, color, onClick, disabled }: buttonProps) {
+export function ButtonDnd({ children, subText, css, onClick, disabled }: buttonProps) {
    return (
       <button
          onClick={onClick}
@@ -16,17 +16,17 @@ export function ButtonDnd({ children, subText, color, onClick, disabled }: butto
             flex-col
             justify-center
             items-center
-            ${color ? color : 'bg-color1'}
             rounded-md
+            bg-color1
             w-[85px]
             h-[52px]
-            active:bg-[#C3D2E5]
             transition
             hover:opacity-80
             font-roboto 
-             text-lg
+            text-lg
             text-white 
             font-bold
+            ${css && css}
          `}
       >
          <div>{disabled ?'...' : children}</div>
