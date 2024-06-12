@@ -4,41 +4,34 @@ import Image from "next/image";
 import Link from "next/link";
 import { BiFootball } from "react-icons/bi";
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from "react";
 
 const NAV_ITEMS = [
-  {
-    label: 'Characters',
-    href: '/',
-  },
-  {
-    label: 'Formations',
-    href: '/create-formation',
-  },
+  { label: 'Characters', href: '/' },
+  { label: 'Formations', href: '/create-formation' },
 ]
 
 export default function Header() {
   const pathname = usePathname();
-  const [screen, setScreen] = useState<number>(641);
-
-  //o evento 'resize' chama uma função sempre que a tela muda de tamanho
-  useEffect(() => {
-    setScreen(window.innerWidth)
-
-    window.addEventListener("resize", () => {
-      setScreen(window.innerWidth)
-    });
-  }, [])
 
   return (
     <div className="bg-color1">
       <div className="container flex justify-between p-8">
         <Link href={NAV_ITEMS[0].href}>
           <Image
-            className="h-auto max-h-[40px]"
-            width={screen > 640 ? 180 : 42}
+            className="hidden sm:flex h-[40px]"
+            width={180}
             height={40}
-            src={screen > 640 ? '/images/blue lock logo.svg' : '/images/blue lock logo 2.svg'}
+            src='/images/blue lock logo.svg'
+            alt='logo'
+            draggable={false}
+            priority={true} //evita um erro no console
+          />
+
+          <Image
+            className="sm:hidden h-[40px]"
+            width={42}
+            height={40}
+            src='/images/blue lock logo 2.svg'
             alt='logo'
             draggable={false}
             priority={true} //evita um erro no console
@@ -50,10 +43,11 @@ export default function Header() {
             <Link
               href={item.href}
               key={item.label}
-              className={`flex items-center gap-1 transition-all ${pathname === item.href ? 'text-gray-50' : 'text-gray-400 hover:text-gray-300'}`}
+              className={`flex items-center gap-1 transition-all ${pathname === item.href ? 'text-white' : 'text-gray-400 hover:text-gray-300'}`}
             >
               <BiFootball size={25} />
-              {screen > 440 ? item.label : item.label.slice(0, 4) + 'S'}
+              <div className="hidden sm:flex">{item.label}</div>
+              <div className="sm:hidden">{item.label.slice(0, 4) + 'S'}</div>
             </Link>
           ))}
         </nav>
