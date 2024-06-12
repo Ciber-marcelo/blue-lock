@@ -100,17 +100,17 @@ export default function FormationMenu() {
             'bottom-[400px] left-[400px]',
             'bottom-[530px] left-[400px]',
          ])
-      } else if (f === '3-5-2') {
+      } else if (f === '3-4-1-2') {
          setTactic([
             'bottom-[10px] left-[400px]',
             'bottom-[150px] left-[400px]',
             'bottom-[150px] left-[600px]',
             'bottom-[150px] left-[200px]',
-            'bottom-[310px] left-[550px]',
-            'bottom-[310px] left-[250px]',
-            'bottom-[390px] left-[400px]',
-            'bottom-[370px] left-[740px]',
-            'bottom-[370px] left-[60px]',
+            'bottom-[290px] left-[550px]',
+            'bottom-[290px] left-[250px]',
+            'bottom-[410px] left-[400px]',
+            'bottom-[330px] left-[740px]',
+            'bottom-[330px] left-[60px]',
             'bottom-[530px] left-[550px]',
             'bottom-[530px] left-[250px]',
          ])
@@ -264,7 +264,7 @@ export default function FormationMenu() {
                            <ButtonDnd onClick={() => handleTactic('4-3-3')} subText='Barcha'>4-3-3</ButtonDnd>
                            <ButtonDnd onClick={() => handleTactic('3-4-3')} subText='Manshine'>3-4-3</ButtonDnd>
                            <ButtonDnd onClick={() => handleTactic('3-5-1-1')} subText='Ubers'>3-5-1-1</ButtonDnd>
-                           <ButtonDnd onClick={() => handleTactic('3-5-2')} subText='PXG'>3-5-2</ButtonDnd>
+                           <ButtonDnd onClick={() => handleTactic('3-4-1-2')} subText='PXG'>3-4-1-2</ButtonDnd>
                         </div>
 
                         <div className='flex flex-col gap-[5px]'>
