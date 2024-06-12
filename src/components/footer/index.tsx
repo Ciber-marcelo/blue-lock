@@ -13,7 +13,7 @@ export default function Footer() {
           alt='Logo Marcelo'
         />
         <p className="h-12 flex items-center px-4 rounded-e-md border-4 border-l-0 bg-white border-color2 font-roboto font-bold text-color2">
-          Desenvolvido por Marcelones
+          Developed by Marcelones
         </p>
       </a>
     </div>
