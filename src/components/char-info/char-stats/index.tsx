@@ -31,6 +31,7 @@ export default function CharStats() {
                src={char.image}
                alt='character image'
                draggable={false}
+               priority={true} //evita um erro no console
             />
          </div>
 
