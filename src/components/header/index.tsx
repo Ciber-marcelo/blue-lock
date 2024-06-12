@@ -50,7 +50,7 @@ export default function Header() {
             <Link
               href={item.href}
               key={item.label}
-              className={`flex items-center gap-1 ${pathname === item.href ? 'text-gray-50' : 'text-gray-400'}`}
+              className={`flex items-center gap-1 transition-all ${pathname === item.href ? 'text-gray-50' : 'text-gray-400 hover:text-gray-300'}`}
             >
               <BiFootball size={25} />
               {screen > 440 ? item.label : item.label.slice(0, 4) + 'S'}

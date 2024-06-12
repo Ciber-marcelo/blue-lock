@@ -171,11 +171,11 @@ export default function FormationMenu() {
          document.body.appendChild(link);
          link.click();
          document.body.removeChild(link);
-         setDisabledButton(false)
       } else {
          window.open(data);
-         setDisabledButton(false)
       }
+
+      setDisabledButton(false)
    };
 
    return (
